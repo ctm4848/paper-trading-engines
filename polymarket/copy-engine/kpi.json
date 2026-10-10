@@ -2,8 +2,8 @@
  "engine": "polymarket-copy",
  "mode": "DELAYED_COPY",
  "copy_window_min": 120,
- "ts": 1791599405,
- "utc": "2026-10-10T02:30:05Z",
+ "ts": 1791599705,
+ "utc": "2026-10-10T02:35:05Z",
  "fills": 0,
  "skips_by_reason": {
   "seen_too_late": 7
