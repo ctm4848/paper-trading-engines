@@ -1,49 +1,49 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791657005,
- "utc": "2026-10-10T18:30:05Z",
- "n_checks": 953,
- "n_checks_with_outcome": 919,
- "brier_model": 0.1787,
- "brier_market_mid": 0.1605,
- "brier_diff_model_minus_market": 0.0182,
+ "ts": 1791657905,
+ "utc": "2026-10-10T18:45:05Z",
+ "n_checks": 967,
+ "n_checks_with_outcome": 932,
+ "brier_model": 0.17797,
+ "brier_market_mid": 0.16017,
+ "brier_diff_model_minus_market": 0.0178,
  "calibration": {
   "0.0-0.1": {
-   "n": 30,
-   "model": 0.04,
-   "market": 0.021,
-   "actual": 0.033
+   "n": 33,
+   "model": 0.039,
+   "market": 0.02,
+   "actual": 0.03
   },
   "0.1-0.2": {
-   "n": 45,
+   "n": 47,
    "model": 0.155,
    "market": 0.06,
-   "actual": 0.067
+   "actual": 0.064
   },
   "0.2-0.3": {
-   "n": 70,
+   "n": 71,
    "model": 0.248,
-   "market": 0.117,
-   "actual": 0.057
+   "market": 0.116,
+   "actual": 0.056
   },
   "0.3-0.4": {
-   "n": 94,
-   "model": 0.361,
+   "n": 95,
+   "model": 0.36,
    "market": 0.24,
-   "actual": 0.245
+   "actual": 0.242
   },
   "0.4-0.5": {
-   "n": 262,
-   "model": 0.457,
-   "market": 0.426,
-   "actual": 0.439
+   "n": 267,
+   "model": 0.458,
+   "market": 0.428,
+   "actual": 0.431
   },
   "0.5-0.6": {
-   "n": 172,
+   "n": 173,
    "model": 0.547,
-   "market": 0.618,
-   "actual": 0.552
+   "market": 0.617,
+   "actual": 0.549
   },
   "0.6-0.7": {
    "n": 89,
@@ -102,11 +102,11 @@
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 919,
+  "checks_with_outcome": 932,
   "checks_needed": 2000,
   "checks_ok": false,
-  "brier_model": 0.1787,
-  "brier_market_mid": 0.1605,
+  "brier_model": 0.17797,
+  "brier_market_mid": 0.16017,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
@@ -122,7 +122,7 @@
    }
   },
   "eligible_variants": [],
-  "checks_per_day_since_log_only": 1337.9,
+  "checks_per_day_since_log_only": 1338.0,
   "est_days_to_2000_checks": 0.8,
   "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
  }
