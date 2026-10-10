@@ -1,0 +1,415 @@
+{
+ "generated_utc": "2026-10-10T02:12:56Z",
+ "generated_ct": "Fri Oct 9 9:12 PM CT",
+ "window": {
+  "start_ct": "Fri Oct 2 9:12 PM CT",
+  "end_ct": "Fri Oct 9 9:12 PM CT"
+ },
+ "paper_only": true,
+ "total": {
+  "start": 20000.0,
+  "equity": 19925.19,
+  "pnl": -74.81,
+  "cash_benchmark": 20002.01,
+  "vs_cash": -76.82,
+  "sleeves_counted": [
+   "Funding A",
+   "Funding B_0.006",
+   "Polymarket copy",
+   "Kalshi BTC 15m"
+  ]
+ },
+ "sleeves": [
+  {
+   "sleeve": "Funding A",
+   "start_cap": 5000.0,
+   "start_ts": 1791466500.0,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "open": [],
+   "status": "live, idle by design",
+   "kill_switch": false,
+   "variant": false,
+   "results_valid": false
+  },
+  {
+   "sleeve": "Funding B_0.006",
+   "start_cap": 5000.0,
+   "start_ts": 1791466500.0,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "open": [],
+   "status": "live, idle by design",
+   "kill_switch": false,
+   "variant": false,
+   "results_valid": false
+  },
+  {
+   "sleeve": "Polymarket copy",
+   "start_cap": 5000.0,
+   "start_ts": 1791572068.0,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "status": "live, delayed copy (120 min window); capture <50%: not yet testable",
+   "kill_switch": false,
+   "variant": false,
+   "results_valid": false
+  },
+  {
+   "sleeve": "Kalshi BTC 15m",
+   "start_cap": 5000.0,
+   "start_ts": 1791572069.4855936,
+   "equity": 4925.19,
+   "week_pnl": -74.81,
+   "trades_week": 3,
+   "trades_total": 3,
+   "status": "shadow / log-only (no new paper trades)",
+   "kill_switch": false,
+   "variant": false,
+   "results_valid": false
+  }
+ ],
+ "variants": [
+  {
+   "sleeve": "Funding A_shadow",
+   "start_cap": 5000.0,
+   "start_ts": 1791466500.0,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "open": [],
+   "status": "live, idle by design",
+   "kill_switch": false,
+   "variant": true,
+   "results_valid": false
+  },
+  {
+   "sleeve": "Funding B_0.008",
+   "start_cap": 5000.0,
+   "start_ts": 1791466500.0,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "open": [],
+   "status": "live, idle by design",
+   "kill_switch": false,
+   "variant": true,
+   "results_valid": false
+  }
+ ],
+ "kalshi": {
+  "n_checks_with_outcome": 33,
+  "brier_model": 0.13665,
+  "brier_market_mid": 0.12598,
+  "clv_c": -9.0,
+  "clv_n": 3,
+  "realized_c_per_contract": -14.67,
+  "resolved_trades": 3,
+  "brier_diff_model_minus_market": 0.01066,
+  "equity": 4925.19,
+  "paused": false,
+  "mode": "LOG_ONLY",
+  "gate": {
+   "passed": false,
+   "checks_with_outcome": 33,
+   "checks_needed": 2000,
+   "checks_ok": false,
+   "brier_model": 0.13665,
+   "brier_market_mid": 0.12598,
+   "brier_ok": false,
+   "replay_trades_needed": 150,
+   "replay": {
+    "base": {
+     "n": 0,
+     "pnl": 0.0,
+     "ok": false
+    },
+    "ban15": {
+     "n": 0,
+     "pnl": 0.0,
+     "ok": false
+    }
+   },
+   "eligible_variants": [],
+   "checks_per_day_since_log_only": null,
+   "est_days_to_2000_checks": null,
+   "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
+  },
+  "source": "kpi.json (+events for CLV)"
+ },
+ "polymarket": {
+  "fills": 0,
+  "resolved_lots": 0,
+  "capture_rate": 0.0,
+  "avg_clv_c": null,
+  "clv_n": 0,
+  "source": "kpi.json",
+  "avg_lag_min": null,
+  "avg_slippage_c": null,
+  "realized_pnl": 0,
+  "equity": 5000.0,
+  "vs_cash": -0.16,
+  "mode": "DELAYED_COPY",
+  "copy_window_min": 120
+ },
+ "funding": {
+  "signal_line": "BTC 24h 0.0017% vs 0.008% floor and p90 0.0083% (4h close<EMA20); 7d 0.0032% vs 0.006% Book B entry (0.008% variant) | ETH 24h -0.0024% vs 0.008% floor and p90 0.0064% (4h close<EMA20); 7d 0.0024% vs 0.006% Book B entry (0.008% variant)",
+  "classifier_consistency": {
+   "classifications_total": 3,
+   "legacy_duplicate_stories": 1,
+   "legacy_agreeing": 0,
+   "legacy_agreement_pct": 0.0,
+   "legacy_disagreements": [
+    {
+     "titles": [
+      "U.S. government moves $1 billion in bitcoin from Bitfinex hack wallet, no sale indicated",
+      "US government moves $1B in seized Bitcoin after $770M transfers"
+     ],
+     "sources": [
+      "coindesk",
+      "cointelegraph"
+     ],
+     "types": [
+      "irrelevant",
+      "shock"
+     ],
+     "conf": [
+      0.1,
+      0.8
+     ]
+    }
+   ],
+   "since_story_dedupe": {
+    "classifications": 0,
+    "multi_source_stories": 0,
+    "note": "one classification per story, so duplicates cannot disagree"
+   },
+   "target_pct": 90
+  },
+  "bookA_vs_btc_buy_hold": {
+   "bookA_pnl": 0.0,
+   "btc_bh": {
+    "start_ts": 1791466500000,
+    "btc_start_px": 82114.9,
+    "btc_now_px": 82677.7,
+    "value": 5034.27,
+    "pnl": 34.27,
+    "pct": 0.69
+   },
+   "diff": -34.27
+  },
+  "bookB_net_apy": {
+   "B_0.006": {
+    "net_pnl": 0.0,
+    "deployed_days": 0.0,
+    "net_apy_on_deployed": null,
+    "cash_apy": 4.0,
+    "beats_cash": null,
+    "note": "never deployed: no APY yet"
+   },
+   "B_0.008": {
+    "net_pnl": 0.0,
+    "deployed_days": 0.0,
+    "net_apy_on_deployed": null,
+    "cash_apy": 4.0,
+    "beats_cash": null,
+    "note": "never deployed: no APY yet"
+   }
+  }
+ },
+ "uptime_week": {
+  "funding": {
+   "uptime_pct": 33.3,
+   "hours_covered": 12,
+   "hours_expected": 36,
+   "design_pct": 20.7,
+   "design_runs": 30,
+   "design_expected": 145,
+   "cadence_s": 900
+  },
+  "polymarket": {
+   "uptime_pct": 42.9,
+   "hours_covered": 3,
+   "hours_expected": 7,
+   "design_pct": 11.5,
+   "design_runs": 10,
+   "design_expected": 87,
+   "cadence_s": 300
+  },
+  "kalshi": {
+   "uptime_pct": 42.9,
+   "hours_covered": 3,
+   "hours_expected": 7,
+   "design_pct": 10.3,
+   "design_runs": 45,
+   "design_expected": 437,
+   "cadence_s": 60
+  }
+ },
+ "uptime_48h": {
+  "funding": {
+   "uptime_pct": 33.3,
+   "hours_covered": 12,
+   "hours_expected": 36,
+   "design_pct": 20.7,
+   "design_runs": 30,
+   "design_expected": 145,
+   "cadence_s": 900
+  },
+  "polymarket": {
+   "uptime_pct": 42.9,
+   "hours_covered": 3,
+   "hours_expected": 7,
+   "design_pct": 11.5,
+   "design_runs": 10,
+   "design_expected": 87,
+   "cadence_s": 300
+  },
+  "kalshi": {
+   "uptime_pct": 42.9,
+   "hours_covered": 3,
+   "hours_expected": 7,
+   "design_pct": 10.3,
+   "design_runs": 45,
+   "design_expected": 437,
+   "cadence_s": 60
+  }
+ },
+ "rule_changes": [
+  {
+   "utc": "2026-10-08T13:50:00Z",
+   "sleeve": "Funding Lab",
+   "change": "news shock pauses NEW Book B entries 24h only; Book B fully unwinds only if USDT < $0.99",
+   "reason": "the owner's change #1 to the approved terms",
+   "by": "paper-trader"
+  },
+  {
+   "utc": "2026-10-10T02:10:00Z",
+   "sleeve": "Funding Lab",
+   "change": "news shocks need >=2 independent sources or 1 official OKX/SEC notice; same-story headlines clustered and classified once",
+   "reason": "Oct 8 shock came from 1 source; the CoinDesk copy of the same story was rated irrelevant (classifier consistency 0/1)",
+   "by": "paper-trader (KPI plan fix 5)"
+  }
+ ],
+ "dividend": {
+  "ok": true,
+  "refreshed": true,
+  "as_of": "2026-10-09",
+  "positions": [
+   {
+    "ticker": "PG",
+    "price": 151.23,
+    "value": 1043.61,
+    "dividends": 0.0,
+    "gain_pct": 4.36
+   },
+   {
+    "ticker": "KO",
+    "price": 88.05,
+    "value": 1028.02,
+    "dividends": 0.0,
+    "gain_pct": 2.8
+   },
+   {
+    "ticker": "JNJ",
+    "price": 261.44,
+    "value": 1021.13,
+    "dividends": 0.0,
+    "gain_pct": 2.11
+   },
+   {
+    "ticker": "LOW",
+    "price": 186.0,
+    "value": 1028.76,
+    "dividends": 0.0,
+    "gain_pct": 2.88
+   },
+   {
+    "ticker": "SHW",
+    "price": 319.36,
+    "value": 999.53,
+    "dividends": 0.0,
+    "gain_pct": -0.05
+   },
+   {
+    "ticker": "XOM",
+    "price": 168.94,
+    "value": 1030.06,
+    "dividends": 0.0,
+    "gain_pct": 3.01
+   },
+   {
+    "ticker": "DOV",
+    "price": 188.83,
+    "value": 995.47,
+    "dividends": 0.0,
+    "gain_pct": -0.45
+   },
+   {
+    "ticker": "ED",
+    "price": 106.1,
+    "value": 1026.21,
+    "dividends": 0.0,
+    "gain_pct": 2.62
+   },
+   {
+    "ticker": "FRT",
+    "price": 106.16,
+    "value": 995.03,
+    "dividends": 0.0,
+    "gain_pct": -0.5
+   },
+   {
+    "ticker": "CINF",
+    "price": 163.39,
+    "value": 1008.89,
+    "dividends": 0.0,
+    "gain_pct": 0.89
+   }
+  ],
+  "market_value": 10176.72,
+  "dividends_cash": 0.0,
+  "total_value": 10176.72,
+  "return_pct": 1.77,
+  "spy_price": 778.57,
+  "spy_total_value": 10116.03,
+  "spy_dividends": 0.0,
+  "spy_return_pct": 1.16,
+  "lead_vs_spy": 60.69,
+  "checked_at": "2026-10-09T21:12:57"
+ },
+ "credits": {
+  "agent": "paper-trader",
+  "week": 170686,
+  "month": 170686,
+  "month_team": "899,904 of 5,000,000",
+  "week_by_model": {
+   "gpt-5": 156281,
+   "gpt-4o-mini": 768,
+   "gemini-2.5-flash": 13637
+  }
+ },
+ "escalations": [
+  {
+   "key": "uptime48:funding",
+   "msg": "funding uptime 33.3% over the last 48h (12/36 hours)"
+  },
+  {
+   "key": "uptime48:polymarket",
+   "msg": "polymarket uptime 42.9% over the last 48h (3/7 hours)"
+  },
+  {
+   "key": "uptime48:kalshi",
+   "msg": "kalshi uptime 42.9% over the last 48h (3/7 hours)"
+  }
+ ],
+ "decision": "none"
+}

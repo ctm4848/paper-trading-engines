@@ -3,24 +3,26 @@
 Usage: onemin [-m model] [-a agent] "prompt"
 - Key comes ONLY from env ONEMIN_AI_API_KEY (an Actions secret). It is never printed or logged.
 - Credits are logged to usage/onemin-usage.tsv (committed with the state).
-- Hard caps (simple port of the box 5.5M stop): at most DAILY_CAP calls per UTC day and MONTHLY_CAP credits per
+- Hard caps (simple port of the box 5.5M stop): at most DAILY_CAP calls per CT day and MONTHLY_CAP credits per
   calendar month FROM THIS REPO. Over a cap -> exit 2 with "BUDGET STOP" on stderr, no API call.
 NOTE: the box helper's monthly team total does not see this file; add it to team usage totals."""
 import json, os, sys, urllib.request, urllib.error, datetime
+from zoneinfo import ZoneInfo
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG = os.path.join(ROOT, "usage", "onemin-usage.tsv")
 DAILY_CAP = int(os.environ.get("ONEMIN_DAILY_CAP", "10"))
 MONTHLY_CAP = int(os.environ.get("ONEMIN_MONTHLY_CAP", "300000"))
-args = sys.argv[1:]; model = "gpt-4o-mini"; agent = "paper-trader-gh"
+args = sys.argv[1:]; model = "gpt-4o-mini"; agent = "paper-trader"
 while len(args) > 1 and args[0] in ("-m", "-a"):
     if args[0] == "-m": model = args[1]
-    else: agent = args[1] + "-gh"
+    else: agent = args[1]
     args = args[2:]
 if not args: print("usage: onemin [-m model] [-a agent] prompt", file=sys.stderr); sys.exit(1)
 prompt = args[0]
 key = os.environ.get("ONEMIN_AI_API_KEY")
 if not key: print("ONEMIN_AI_API_KEY not set", file=sys.stderr); sys.exit(1)
-now = datetime.datetime.now(datetime.timezone.utc); day = now.strftime("%Y-%m-%d"); month = now.strftime("%Y-%m")
+now = datetime.datetime.now(ZoneInfo("America/Chicago")).replace(tzinfo=None)   # naive CT, same format as the box log
+day = now.strftime("%Y-%m-%d"); month = now.strftime("%Y-%m")
 calls_today = used_month = 0
 if os.path.exists(LOG):
     for l in open(LOG):

@@ -21,7 +21,7 @@ repeats a window changes nothing.
 
 ## Headline classifier budget
 Only the Funding Lab uses an LLM (gpt-4o-mini via 1min.AI, key in the `ONEMIN_AI_API_KEY` Actions secret). `tools/onemin`
-hard-caps it at 10 calls/UTC day and 300,000 credits/month and logs every call to `usage/onemin-usage.tsv`.
+hard-caps it at 10 calls/day (CT) and 300,000 credits/month and logs every call to `usage/onemin-usage.tsv`.
 
 ## Files
 - `*/state.json`, `*/events.jsonl`, `*/kpi.json`, `*/heartbeat.txt`: paper ledgers and KPIs (written only by the runner)

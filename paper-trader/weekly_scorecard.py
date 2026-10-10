@@ -25,9 +25,13 @@ OUT_MD = os.path.join(HERE, "WEEKLY.md"); OUT_JSON = os.path.join(HERE, "WEEKLY.
 ESC_STATE = os.path.join(HERE, "escalation_state.json")
 RULE_CHANGES = os.path.join(HERE, "rule_changes.jsonl")
 DECISION = os.path.join(HERE, "decision.txt")          # optional one-line manual decision for the owner
-ONEMIN = "/home/box/tools/onemin"; ONEMIN_LOG = "/home/box/tools/onemin-usage.log"
+_ROOT = os.environ.get("PAPER_ENGINES_ROOT")   # set on the GitHub runner (repo checkout); unset on the box
+ONEMIN = os.environ.get("ONEMIN_BIN", "/home/box/tools/onemin")
+ONEMIN_LOG = os.path.join(_ROOT, "usage", "onemin-usage.tsv") if _ROOT else "/home/box/tools/onemin-usage.log"
 PATHS = {"funding": "/workspace/funding-lab/engine", "polymarket": "/workspace/polymarket/copy-engine",
          "kalshi": "/workspace/kalshi-btc/engine"}
+if _ROOT: PATHS = {"funding": os.path.join(_ROOT, "funding-lab/engine"), "polymarket": os.path.join(_ROOT, "polymarket/copy-engine"),
+                   "kalshi": os.path.join(_ROOT, "kalshi-btc/engine")}
 CADENCE_S = {"funding": 900, "polymarket": 300, "kalshi": 60}
 CASH_APY = 0.04; WEEK_S = 7*86400; H = 3600
 UPTIME_MIN = 80.0; DOWN_ESC = -10.0
