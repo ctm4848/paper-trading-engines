@@ -1,13 +1,13 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791666905,
- "utc": "2026-10-10T21:15:05Z",
- "n_checks": 1108,
- "n_checks_with_outcome": 1073,
- "brier_model": 0.18204,
- "brier_market_mid": 0.16177,
- "brier_diff_model_minus_market": 0.02027,
+ "ts": 1791667805,
+ "utc": "2026-10-10T21:30:05Z",
+ "n_checks": 1122,
+ "n_checks_with_outcome": 1087,
+ "brier_model": 0.1833,
+ "brier_market_mid": 0.16618,
+ "brier_diff_model_minus_market": 0.01712,
  "calibration": {
   "0.0-0.1": {
    "n": 36,
@@ -16,10 +16,10 @@
    "actual": 0.028
   },
   "0.1-0.2": {
-   "n": 47,
-   "model": 0.155,
+   "n": 48,
+   "model": 0.156,
    "market": 0.06,
-   "actual": 0.064
+   "actual": 0.062
   },
   "0.2-0.3": {
    "n": 74,
@@ -28,28 +28,28 @@
    "actual": 0.054
   },
   "0.3-0.4": {
-   "n": 103,
+   "n": 105,
    "model": 0.36,
-   "market": 0.25,
-   "actual": 0.252
+   "market": 0.256,
+   "actual": 0.248
   },
   "0.4-0.5": {
-   "n": 311,
-   "model": 0.457,
-   "market": 0.435,
-   "actual": 0.437
+   "n": 313,
+   "model": 0.456,
+   "market": 0.436,
+   "actual": 0.435
   },
   "0.5-0.6": {
-   "n": 231,
-   "model": 0.543,
-   "market": 0.639,
-   "actual": 0.571
+   "n": 236,
+   "model": 0.544,
+   "market": 0.64,
+   "actual": 0.559
   },
   "0.6-0.7": {
-   "n": 101,
+   "n": 105,
    "model": 0.644,
-   "market": 0.792,
-   "actual": 0.802
+   "market": 0.794,
+   "actual": 0.771
   },
   "0.7-0.8": {
    "n": 74,
@@ -102,11 +102,11 @@
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 1073,
+  "checks_with_outcome": 1087,
   "checks_needed": 2000,
   "checks_ok": false,
-  "brier_model": 0.18204,
-  "brier_market_mid": 0.16177,
+  "brier_model": 0.1833,
+  "brier_market_mid": 0.16618,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
@@ -122,7 +122,7 @@
    }
   },
   "eligible_variants": [],
-  "checks_per_day_since_log_only": 1340.0,
+  "checks_per_day_since_log_only": 1340.1,
   "est_days_to_2000_checks": 0.7,
   "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
  }
