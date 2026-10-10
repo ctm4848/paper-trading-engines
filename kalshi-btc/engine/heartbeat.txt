@@ -1,6 +1,6 @@
 {
- "ts": 1791612905348,
- "utc": "2026-10-10T06:15:05Z",
+ "ts": 1791613805208,
+ "utc": "2026-10-10T06:30:05Z",
  "equity": 5000.0,
  "cash": 5000.0,
  "open": 0,
@@ -8,10 +8,10 @@
  "wins": 0,
  "realized_pnl": 0,
  "avg_pnl_c_per_contract": null,
- "checks": 267,
+ "checks": 281,
  "paused": false,
  "pause_reason": null,
  "mode": "LOG_ONLY",
  "gate_passed": false,
- "checks_with_outcome": 249
+ "checks_with_outcome": 262
 }
