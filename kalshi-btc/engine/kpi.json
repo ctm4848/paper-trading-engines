@@ -1,13 +1,13 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791634505,
- "utc": "2026-10-10T12:15:05Z",
- "n_checks": 603,
- "n_checks_with_outcome": 579,
- "brier_model": 0.17944,
- "brier_market_mid": 0.1682,
- "brier_diff_model_minus_market": 0.01125,
+ "ts": 1791635405,
+ "utc": "2026-10-10T12:30:05Z",
+ "n_checks": 616,
+ "n_checks_with_outcome": 593,
+ "brier_model": 0.18196,
+ "brier_market_mid": 0.17317,
+ "brier_diff_model_minus_market": 0.00879,
  "calibration": {
   "0.0-0.1": {
    "n": 18,
@@ -34,10 +34,10 @@
    "actual": 0.246
   },
   "0.4-0.5": {
-   "n": 178,
+   "n": 191,
    "model": 0.457,
-   "market": 0.428,
-   "actual": 0.444
+   "market": 0.424,
+   "actual": 0.482
   },
   "0.5-0.6": {
    "n": 103,
@@ -52,10 +52,10 @@
    "actual": 0.796
   },
   "0.7-0.8": {
-   "n": 34,
+   "n": 35,
    "model": 0.739,
-   "market": 0.845,
-   "actual": 0.853
+   "market": 0.849,
+   "actual": 0.857
   },
   "0.8-0.9": {
    "n": 23,
@@ -82,42 +82,42 @@
  "paused": false,
  "hypothetical": {
   "base": {
-   "n": 37,
-   "wins": 14,
-   "pnl": 156.04,
-   "c_per_contract": 4.93,
-   "roi": 0.1696,
-   "fees": 42.83,
+   "n": 38,
+   "wins": 15,
+   "pnl": 194.06,
+   "c_per_contract": 6.01,
+   "roi": 0.2054,
+   "fees": 43.87,
    "open": 1
   },
   "ban15": {
-   "n": 35,
-   "wins": 14,
-   "pnl": 205.95,
-   "c_per_contract": 7.35,
-   "roi": 0.2367,
-   "fees": 39.96,
+   "n": 36,
+   "wins": 15,
+   "pnl": 243.97,
+   "c_per_contract": 8.52,
+   "roi": 0.2726,
+   "fees": 41.0,
    "open": 1
   }
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 579,
+  "checks_with_outcome": 593,
   "checks_needed": 2000,
   "checks_ok": false,
-  "brier_model": 0.17944,
-  "brier_market_mid": 0.1682,
+  "brier_model": 0.18196,
+  "brier_market_mid": 0.17317,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
    "base": {
-    "n": 37,
-    "pnl": 156.04,
+    "n": 38,
+    "pnl": 194.06,
     "ok": false
    },
    "ban15": {
-    "n": 35,
-    "pnl": 205.95,
+    "n": 36,
+    "pnl": 243.97,
     "ok": false
    }
   },
