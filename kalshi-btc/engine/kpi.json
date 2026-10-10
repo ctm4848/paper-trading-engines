@@ -1,19 +1,19 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791663305,
- "utc": "2026-10-10T20:15:05Z",
- "n_checks": 1051,
- "n_checks_with_outcome": 1016,
- "brier_model": 0.18006,
- "brier_market_mid": 0.15534,
- "brier_diff_model_minus_market": 0.02472,
+ "ts": 1791664205,
+ "utc": "2026-10-10T20:30:05Z",
+ "n_checks": 1066,
+ "n_checks_with_outcome": 1045,
+ "brier_model": 0.1815,
+ "brier_market_mid": 0.16034,
+ "brier_diff_model_minus_market": 0.02116,
  "calibration": {
   "0.0-0.1": {
-   "n": 33,
-   "model": 0.039,
-   "market": 0.02,
-   "actual": 0.03
+   "n": 35,
+   "model": 0.04,
+   "market": 0.019,
+   "actual": 0.029
   },
   "0.1-0.2": {
    "n": 47,
@@ -22,40 +22,40 @@
    "actual": 0.064
   },
   "0.2-0.3": {
-   "n": 72,
+   "n": 73,
    "model": 0.248,
-   "market": 0.115,
-   "actual": 0.056
+   "market": 0.114,
+   "actual": 0.055
   },
   "0.3-0.4": {
-   "n": 98,
+   "n": 101,
    "model": 0.36,
-   "market": 0.254,
-   "actual": 0.265
+   "market": 0.253,
+   "actual": 0.257
   },
   "0.4-0.5": {
-   "n": 294,
+   "n": 304,
    "model": 0.457,
-   "market": 0.433,
-   "actual": 0.439
+   "market": 0.434,
+   "actual": 0.424
   },
   "0.5-0.6": {
-   "n": 210,
-   "model": 0.544,
-   "market": 0.635,
-   "actual": 0.629
+   "n": 221,
+   "model": 0.545,
+   "market": 0.639,
+   "actual": 0.597
   },
   "0.6-0.7": {
-   "n": 96,
-   "model": 0.645,
-   "market": 0.789,
-   "actual": 0.802
+   "n": 97,
+   "model": 0.644,
+   "market": 0.79,
+   "actual": 0.794
   },
   "0.7-0.8": {
-   "n": 71,
-   "model": 0.738,
-   "market": 0.882,
-   "actual": 0.873
+   "n": 72,
+   "model": 0.737,
+   "market": 0.883,
+   "actual": 0.861
   },
   "0.8-0.9": {
    "n": 42,
@@ -102,11 +102,11 @@
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 1016,
+  "checks_with_outcome": 1045,
   "checks_needed": 2000,
   "checks_ok": false,
-  "brier_model": 0.18006,
-  "brier_market_mid": 0.15534,
+  "brier_model": 0.1815,
+  "brier_market_mid": 0.16034,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
@@ -122,7 +122,7 @@
    }
   },
   "eligible_variants": [],
-  "checks_per_day_since_log_only": 1338.5,
+  "checks_per_day_since_log_only": 1339.8,
   "est_days_to_2000_checks": 0.7,
   "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
  }
