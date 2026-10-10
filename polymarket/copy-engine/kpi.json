@@ -2,8 +2,8 @@
  "engine": "polymarket-copy",
  "mode": "DELAYED_COPY",
  "copy_window_min": 120,
- "ts": 1791619205,
- "utc": "2026-10-10T08:00:05Z",
+ "ts": 1791620105,
+ "utc": "2026-10-10T08:15:05Z",
  "fills": 1,
  "skips_by_reason": {},
  "capturable_missed": 0,
@@ -25,8 +25,8 @@
  "equity": 4998.69,
  "cash": 4925.0,
  "deployed": 75.0,
- "cash_benchmark": 5000.12,
- "vs_cash": -1.43,
+ "cash_benchmark": 5000.13,
+ "vs_cash": -1.44,
  "per_trader": {
   "mountaindewd": {
    "fills": 1,
