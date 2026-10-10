@@ -1,17 +1,17 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791616505,
- "utc": "2026-10-10T07:15:05Z",
- "n_checks": 322,
- "n_checks_with_outcome": 303,
- "brier_model": 0.17543,
- "brier_market_mid": 0.16551,
- "brier_diff_model_minus_market": 0.00992,
+ "ts": 1791617405,
+ "utc": "2026-10-10T07:30:05Z",
+ "n_checks": 336,
+ "n_checks_with_outcome": 317,
+ "brier_model": 0.17561,
+ "brier_market_mid": 0.16731,
+ "brier_diff_model_minus_market": 0.0083,
  "calibration": {
   "0.0-0.1": {
-   "n": 10,
-   "model": 0.043,
+   "n": 13,
+   "model": 0.037,
    "market": 0.011,
    "actual": 0.0
   },
@@ -28,28 +28,28 @@
    "actual": 0.0
   },
   "0.3-0.4": {
-   "n": 34,
-   "model": 0.364,
-   "market": 0.258,
-   "actual": 0.176
+   "n": 37,
+   "model": 0.36,
+   "market": 0.259,
+   "actual": 0.162
   },
   "0.4-0.5": {
-   "n": 105,
+   "n": 110,
    "model": 0.455,
-   "market": 0.426,
-   "actual": 0.562
+   "market": 0.43,
+   "actual": 0.536
   },
   "0.5-0.6": {
-   "n": 35,
-   "model": 0.546,
-   "market": 0.613,
-   "actual": 0.6
+   "n": 36,
+   "model": 0.547,
+   "market": 0.614,
+   "actual": 0.583
   },
   "0.6-0.7": {
-   "n": 26,
-   "model": 0.638,
-   "market": 0.757,
-   "actual": 0.885
+   "n": 28,
+   "model": 0.637,
+   "market": 0.753,
+   "actual": 0.821
   },
   "0.7-0.8": {
    "n": 24,
@@ -82,42 +82,42 @@
  "paused": false,
  "hypothetical": {
   "base": {
-   "n": 17,
-   "wins": 7,
-   "pnl": 112.67,
-   "c_per_contract": 7.38,
-   "roi": 0.2662,
-   "fees": 19.98,
+   "n": 18,
+   "wins": 8,
+   "pnl": 143.07,
+   "c_per_contract": 9.05,
+   "roi": 0.3194,
+   "fees": 20.93,
    "open": 1
   },
   "ban15": {
-   "n": 16,
-   "wins": 7,
-   "pnl": 137.64,
-   "c_per_contract": 10.35,
-   "roi": 0.3455,
-   "fees": 18.53,
+   "n": 17,
+   "wins": 8,
+   "pnl": 168.04,
+   "c_per_contract": 12.13,
+   "roi": 0.3973,
+   "fees": 19.48,
    "open": 1
   }
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 303,
+  "checks_with_outcome": 317,
   "checks_needed": 2000,
   "checks_ok": false,
-  "brier_model": 0.17543,
-  "brier_market_mid": 0.16551,
+  "brier_model": 0.17561,
+  "brier_market_mid": 0.16731,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
    "base": {
-    "n": 17,
-    "pnl": 112.67,
+    "n": 18,
+    "pnl": 143.07,
     "ok": false
    },
    "ban15": {
-    "n": 16,
-    "pnl": 137.64,
+    "n": 17,
+    "pnl": 168.04,
     "ok": false
    }
   },

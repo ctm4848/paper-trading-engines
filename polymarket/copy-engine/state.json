@@ -447,8 +447,8 @@
  },
  "entries": {},
  "lots": {},
- "runs": 57,
- "last_run": 1791616505,
+ "runs": 60,
+ "last_run": 1791617405,
  "tag_cache": {},
  "fail_streak": {
   "0x944e0472b99926f4f712fc97dc0a846a8c5d8c94": 0,
@@ -484,7 +484,7 @@
   "settled": 0,
   "avg_lag_min": null,
   "avg_slippage_c": null,
-  "cash_benchmark": 5000.1,
-  "vs_benchmark": -0.1
+  "cash_benchmark": 5000.11,
+  "vs_benchmark": -0.11
  }
 }
