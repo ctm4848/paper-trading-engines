@@ -2,6 +2,7 @@
 import json, os, sys, tempfile, time, shutil
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import weekly_scorecard as W
+W.RESET_TS = 0   # fixtures use their own fixed clock; the live reset baseline is tested separately
 
 fails = []
 def check(name, cond, detail=""):
@@ -90,6 +91,16 @@ def test_validity_and_escalation(root):
     d2 = W.collect(NOW, refresh_dividend=False, with_credits=False)
     check("decision asks the owner about the kill switch", "kill switch" in W.decision(d2, W.escalation_flags(NOW, d2)))
 
+def test_reset_baseline(root):
+    fixture(root, hourly_runs=72)
+    W.RESET_TS = NOW - 7200
+    try:
+        d = W.collect(NOW, refresh_dividend=False, with_credits=False)
+        check("reset: windows start at the reset (1 complete hour in 2h window ending :40)", d["uptime_week"]["funding"]["hours_expected"] == 1, str(d["uptime_week"]["funding"]))
+        check("reset: sleeve start = reset time, total start $20,000", all(s["start_ts"] >= NOW - 7200 for s in d["sleeves"]) and d["total"]["start"] == 20000.0)
+    finally:
+        W.RESET_TS = 0
+
 def test_missing_engine_dirs(root):
     W.PATHS = {"funding": os.path.join(root, "nope1"), "polymarket": os.path.join(root, "nope2"), "kalshi": os.path.join(root, "nope3")}
     try:
@@ -100,7 +111,7 @@ def test_missing_engine_dirs(root):
 if __name__ == "__main__":
     real = dict(W.PATHS)
     test_uptime_math()
-    for t in (test_graceful_without_kpi, test_kpi_json_preferred, test_validity_and_escalation, test_missing_engine_dirs):
+    for t in (test_graceful_without_kpi, test_kpi_json_preferred, test_validity_and_escalation, test_reset_baseline, test_missing_engine_dirs):
         r = tempfile.mkdtemp(); 
         try: t(r)
         finally: shutil.rmtree(r)

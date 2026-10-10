@@ -9,7 +9,9 @@ for p in funding-lab/engine polymarket/copy-engine kalshi-btc/engine; do
   find "$p" -mindepth 1 -maxdepth 1 ! -name '.gitkeep' -exec rm -rf {} +
   # keep pass history (uptime evidence) as compact "<iso> ok" lines; the runner appends to the same file
   if [ -f "/workspace/$p/loop.log" ]; then rg -o -N '^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ ok' "/workspace/$p/loop.log" | sed 's/$/ box/' > "$p/loop.log.box" || true; fi
-  (cd "/workspace/$p" && tar cf - --exclude=__pycache__ --exclude='*.lock' --exclude=loop.pid --exclude='loop.log*' \
+  # archive/ (pre-reset ledgers) is included only if small (<= 5 MB); otherwise it stays on the box
+  AX=""; if [ -d "/workspace/$p/archive" ] && [ "$(du -sk "/workspace/$p/archive" | cut -f1)" -gt 5120 ]; then AX="--exclude=./archive"; echo "NOTE: $p/archive > 5 MB, left on the box"; fi
+  (cd "/workspace/$p" && tar cf - $AX --exclude=__pycache__ --exclude='*.lock' --exclude=loop.pid --exclude='loop.log*' \
      --exclude='.tmp-*' --exclude=research --exclude=.venv .) | (cd "$p" && tar xf -)
   if [ -f "$p/loop.log.box" ]; then mv "$p/loop.log.box" "$p/loop.log"; fi
 done

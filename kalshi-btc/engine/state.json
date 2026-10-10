@@ -1,175 +1,86 @@
 {
  "version": 1,
- "start_ts": 1791572069.4855936,
- "created_utc": "2026-10-09T18:54:29Z",
- "cash": 4925.19,
+ "start_ts": 1791599829.3365908,
+ "created_utc": "2026-10-10T02:37:09Z",
+ "cash": 5000.0,
  "peak_equity": 5000.0,
  "positions": {},
- "closed": {
-  "KXBTC15M-26OCT091815-15": {
-   "ticker": "KXBTC15M-26OCT091815-15",
-   "side": "yes",
-   "contracts": 349,
-   "notional": 23.435000000000002,
-   "fee": 1.535,
-   "cost": 24.97,
-   "vwap": 0.0671489971346705,
-   "all_in": 0.07154727793696275,
-   "p_model": 0.12522024706488805,
-   "p_up": 0.12522024706488805,
-   "entry_ts": 1791583805.9465134,
-   "tau_s": 294,
-   "strike": 82476.1,
-   "spot": 82415.905,
-   "close_ts": 1791584100.0,
-   "fills": [
-    [
-     0.067,
-     297
-    ],
-    [
-     0.068,
-     52
-    ]
-   ],
-   "result": "no",
-   "payout": 0.0,
-   "pnl": -24.97,
-   "settled_ts": 1791596365.1329625
-  },
-  "KXBTC15M-26OCT092145-45": {
-   "ticker": "KXBTC15M-26OCT092145-45",
-   "side": "no",
-   "contracts": 82,
-   "notional": 23.779999999999998,
-   "fee": 1.19,
-   "cost": 24.97,
-   "vwap": 0.29,
-   "all_in": 0.3045121951219512,
-   "p_model": 0.3516281178455638,
-   "p_up": 0.6483718821544362,
-   "entry_ts": 1791596465.3627884,
-   "tau_s": 235,
-   "strike": 82571.24,
-   "spot": 82588.88,
-   "close_ts": 1791596700.0,
-   "fills": [
-    [
-     0.29,
-     82
-    ]
-   ],
-   "result": "yes",
-   "payout": 0.0,
-   "pnl": -24.97,
-   "settled_ts": 1791596778.5841703
-  },
-  "KXBTC15M-26OCT092200-00": {
-   "ticker": "KXBTC15M-26OCT092200-00",
-   "side": "no",
-   "contracts": 79,
-   "notional": 23.7,
-   "fee": 1.17,
-   "cost": 24.87,
-   "vwap": 0.3,
-   "all_in": 0.31481012658227847,
-   "p_model": 0.35551403269065696,
-   "p_up": 0.644485967309343,
-   "entry_ts": 1791597245.4969726,
-   "tau_s": 355,
-   "strike": 82594.23,
-   "spot": 82615.745,
-   "close_ts": 1791597600.0,
-   "fills": [
-    [
-     0.3,
-     79
-    ]
-   ],
-   "result": "yes",
-   "payout": 0.0,
-   "pnl": -24.87,
-   "settled_ts": 1791597637.5688818
-  }
- },
+ "closed": {},
  "await": {
-  "KXBTC15M-26OCT092230-30": 1791599400.0
+  "KXBTC15M-26OCT092245-45": 1791600300.0
  },
- "trades_by_day": {
-  "2026-10-09": 1,
-  "2026-10-10": 2
- },
+ "trades_by_day": {},
  "paused": false,
  "pause_reason": null,
- "runs": 56,
- "last_run": 1791598745.6327746,
+ "runs": 3,
+ "last_run": 1791599945.4731333,
  "spot_fail_streak": 0,
  "api_fail_streak": 0,
- "n_checks": 54,
- "last_summary": {
-  "equity": 4925.19,
-  "cash": 4925.19,
-  "open": 0,
-  "trades_settled": 3,
-  "wins": 0,
-  "realized_pnl": -74.81,
-  "avg_pnl_c_per_contract": -14.67,
-  "checks": 54,
-  "paused": false,
-  "pause_reason": null
- },
+ "n_checks": 67,
  "hypo": {
   "base": {
-   "open": {},
-   "closed": {
-    "KXBTC15M-26OCT092215-15": {
-     "ticker": "KXBTC15M-26OCT092215-15",
+   "open": {
+    "KXBTC15M-26OCT092245-45": {
+     "ticker": "KXBTC15M-26OCT092245-45",
      "side": "no",
-     "contracts": 118,
-     "vwap": 0.2,
-     "fee": 1.33,
-     "cost": 24.93,
-     "p_model": 0.2769722655510597,
-     "p_up": 0.7230277344489403,
-     "entry_ts": 1791598265.6259873,
-     "tau_s": 234,
-     "strike": 82624.95,
-     "close_ts": 1791598500.0,
-     "result": "no",
-     "payout": 118.0,
-     "pnl": 93.07,
-     "settled_ts": 1791598565.6777158
+     "contracts": 95,
+     "vwap": 0.25,
+     "fee": 1.25,
+     "cost": 25.0,
+     "p_model": 0.35832090140209494,
+     "p_up": 0.6416790985979051,
+     "entry_ts": 1791599885.4342062,
+     "tau_s": 415,
+     "strike": 82562.21,
+     "close_ts": 1791600300.0
     }
    },
+   "closed": {},
    "by_day": {
     "2026-10-10": 1
    }
   },
   "ban15": {
-   "open": {},
-   "closed": {
-    "KXBTC15M-26OCT092215-15": {
-     "ticker": "KXBTC15M-26OCT092215-15",
+   "open": {
+    "KXBTC15M-26OCT092245-45": {
+     "ticker": "KXBTC15M-26OCT092245-45",
      "side": "no",
-     "contracts": 118,
-     "vwap": 0.2,
-     "fee": 1.33,
-     "cost": 24.93,
-     "p_model": 0.2769722655510597,
-     "p_up": 0.7230277344489403,
-     "entry_ts": 1791598265.6259873,
-     "tau_s": 234,
-     "strike": 82624.95,
-     "close_ts": 1791598500.0,
-     "result": "no",
-     "payout": 118.0,
-     "pnl": 93.07,
-     "settled_ts": 1791598565.6777158
+     "contracts": 95,
+     "vwap": 0.25,
+     "fee": 1.25,
+     "cost": 25.0,
+     "p_model": 0.35832090140209494,
+     "p_up": 0.6416790985979051,
+     "entry_ts": 1791599885.4342062,
+     "tau_s": 415,
+     "strike": 82562.21,
+     "close_ts": 1791600300.0
     }
    },
+   "closed": {},
    "by_day": {
     "2026-10-10": 1
    }
   }
+ },
+ "reset": {
+  "utc": "2026-10-10T02:37:09Z",
+  "ts": 1791599829.3365908,
+  "archive": "/workspace/kalshi-btc/engine/archive/pre-reset-2026-10-09",
+  "reason": "Scoreboard reset on Oct 9, 2026 at the owner's request ('Let's not worry about the past trades and reset the scoreboard $. Our plan and information available was incomplete.'); prior results archived.",
+  "carried_checks": 64,
+  "carried_outcomes": 7
+ },
+ "last_summary": {
+  "equity": 5000.0,
+  "cash": 5000.0,
+  "open": 0,
+  "trades_settled": 0,
+  "wins": 0,
+  "realized_pnl": 0,
+  "avg_pnl_c_per_contract": null,
+  "checks": 67,
+  "paused": false,
+  "pause_reason": null
  }
 }

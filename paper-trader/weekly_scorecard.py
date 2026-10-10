@@ -34,6 +34,10 @@ if _ROOT: PATHS = {"funding": os.path.join(_ROOT, "funding-lab/engine"), "polyma
                    "kalshi": os.path.join(_ROOT, "kalshi-btc/engine")}
 CADENCE_S = {"funding": 900, "polymarket": 300, "kalshi": 60}
 CASH_APY = 0.04; WEEK_S = 7*86400; H = 3600
+# Scoreboard reset (the owner, Oct 9 2026 9:37:09 PM CT): performance, cash benchmark and uptime windows start here.
+# Prior results are archived under <engine>/archive/pre-reset-2026-10-09/. Total start = 4 sleeves x $5,000 = $20,000.
+RESET_TS = 1791599829.3365908
+RESET_ARCHIVE = "archive/pre-reset-2026-10-09"
 UPTIME_MIN = 80.0; DOWN_ESC = -10.0
 REQUIRED_N = {"A": (8, "Book A trades (90-day rule)"), "B_0.006": (None, "90-day review vs cash"),
               "polymarket": (40, "resolved lots"), "kalshi": (150, "settled trades")}
@@ -196,7 +200,7 @@ def polymarket_sleeve(now, wk0):
             if k in kpi: m[k] = kpi[k]
     start = to_s(st.get("start_ts")) or now
     eq = m.get("equity", (st.get("last_summary") or {}).get("equity"))
-    wk_pnl = (eq - 5000.0) if (eq is not None and start >= wk0) else None
+    wk_pnl = (eq - 5000.0) if (eq is not None and start >= wk0 - 60) else None
     status = "live" + (f", {m['mode'].lower().replace('_', ' ')} ({m.get('copy_window_min')} min window)" if m.get("mode") else "")
     if m.get("capture_rate") is not None and m["capture_rate"] < 0.5 and (m.get("fills", 0) + late) >= 5:
         status += "; capture <50%: not yet testable"
@@ -275,12 +279,14 @@ def escalation_check(now=None, state_path=None):
 
 # ---------------------------------------------------------------- collect + render
 def collect(now=None, refresh_dividend=True, with_credits=True):
-    now = now or time.time(); wk0 = now - WEEK_S
+    now = now or time.time(); wk_raw = now - WEEK_S; wk0 = max(wk_raw, RESET_TS or 0)   # performance + uptime window
     fb, fx = funding_sleeves(now, wk0)
     ks, km = kalshi_sleeve(now, wk0)
     ps, pm = polymarket_sleeve(now, wk0)
     sleeves = [s for n, s in fb.items() if n in ("A", "B_0.006")] + [ps, ks]
     variants = [s for n, s in fb.items() if n not in ("A", "B_0.006")]
+    for s_ in sleeves + list(fb.values()):
+        s_["start_ts"] = max(s_["start_ts"], RESET_TS or 0)
     starts = {"funding": fb.get("A", {}).get("start_ts", now), "polymarket": ps["start_ts"], "kalshi": ks["start_ts"]}
     runs = {n: run_times(n, PATHS[n]) for n in PATHS}
     up_wk = {n: uptime(runs[n], max(wk0, starts[n]), now, CADENCE_S[n]) for n in PATHS}
@@ -288,12 +294,13 @@ def collect(now=None, refresh_dividend=True, with_credits=True):
     eng_of = lambda s: "funding" if s["sleeve"].startswith("Funding") else "polymarket" if s["sleeve"].startswith("Poly") else "kalshi"
     for s in sleeves + variants:
         u = up_wk[eng_of(s)]["uptime_pct"]
-        s["results_valid"] = u is not None and u >= UPTIME_MIN
+        s["results_valid"] = None if u is None else u >= UPTIME_MIN     # None = no complete hour measured yet
     tot_start = sum(s["start_cap"] for s in sleeves)
     tot_eq = sum(s["equity"] for s in sleeves if s["equity"] is not None)
     tot_cash = sum(cash_value(s["start_cap"], s["start_ts"], now) for s in sleeves)
     data = {"generated_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(now)), "generated_ct": ct(now),
             "window": {"start_ct": ct(wk0), "end_ct": ct(now)}, "paper_only": True,
+            "reset": {"ts": RESET_TS, "ct": ct(RESET_TS) if RESET_TS else None, "archive": RESET_ARCHIVE},
             "total": {"start": tot_start, "equity": round(tot_eq, 2), "pnl": round(tot_eq - tot_start, 2),
                       "cash_benchmark": round(tot_cash, 2), "vs_cash": round(tot_eq - tot_cash, 2),
                       "sleeves_counted": [s["sleeve"] for s in sleeves]},
@@ -302,9 +309,9 @@ def collect(now=None, refresh_dividend=True, with_credits=True):
                         "classifier_consistency": (fx.get("kpi") or {}).get("classifier_consistency"),
                         "bookA_vs_btc_buy_hold": (fx.get("kpi") or {}).get("bookA_vs_btc_buy_hold"),
                         "bookB_net_apy": (fx.get("kpi") or {}).get("bookB_net_apy")},
-            "uptime_week": up_wk, "uptime_48h": up_48, "rule_changes": rule_changes(wk0)}
+            "uptime_week": up_wk, "uptime_48h": up_48, "rule_changes": rule_changes(wk_raw)}
     data["dividend"] = dividend_update(refresh_dividend)
-    if with_credits: data["credits"] = credits(now, wk0)
+    if with_credits: data["credits"] = credits(now, wk_raw)
     return data
 
 def decision(data, flags):
@@ -319,7 +326,8 @@ def decision(data, flags):
 
 def render(data, flags):
     T = data["total"]; L = []
-    L.append(f"# Paper Trader weekly scorecard (PAPER ONLY, fake money): {data['window']['start_ct']} to {data['window']['end_ct']}")
+    L.append(f"# Paper Trader weekly scorecard (PAPER ONLY, fake money): {data['window']['start_ct']} to {data['window']['end_ct']}"
+             + (f" (scoreboard reset {data['reset']['ct']}; earlier results archived)" if data.get("reset", {}).get("ct") else ""))
     L.append("")
     L.append(f"1. **Total paper equity** {money(T['equity'])} vs {money(T['start'])} start ({money(T['pnl'], True)}); "
              f"cash at 4%/yr would be {money(T['cash_benchmark'])} ({money(T['vs_cash'], True)} vs cash). "
@@ -330,7 +338,7 @@ def render(data, flags):
         req, what = REQUIRED_N[key]
         n_txt = f"{s['trades_total']}/{req} {what}" if req else f"{s['trades_total']} trades ({what})"
         L.append(f"2. **{s['sleeve']}** {money(s['equity'])}, week {money(s['week_pnl'], True)}, trades {s['trades_week']} this week, "
-                 f"N {n_txt}; {s['status']}{'' if s['results_valid'] else '; **RESULTS INVALID (uptime <80%)**'}")
+                 f"N {n_txt}; {s['status']}{'; uptime not measurable yet (no complete hour since start)' if s['results_valid'] is None else '' if s['results_valid'] else '; **RESULTS INVALID (uptime <80%)**'}")
     v = data["variants"]
     if v: L.append("   Variants (not counted): " + "; ".join(f"{x['sleeve']} {money(x['equity'])}, N {x['trades_total']}" for x in v))
     k = data["kalshi"]; p = data["polymarket"]

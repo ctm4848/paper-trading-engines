@@ -1,17 +1,17 @@
 {
- "ts": 1791598746437,
- "utc": "2026-10-10T02:19:06Z",
- "equity": 4925.19,
- "cash": 4925.19,
+ "ts": 1791599946466,
+ "utc": "2026-10-10T02:39:06Z",
+ "equity": 5000.0,
+ "cash": 5000.0,
  "open": 0,
- "trades_settled": 3,
+ "trades_settled": 0,
  "wins": 0,
- "realized_pnl": -74.81,
- "avg_pnl_c_per_contract": -14.67,
- "checks": 54,
+ "realized_pnl": 0,
+ "avg_pnl_c_per_contract": null,
+ "checks": 67,
  "paused": false,
  "pause_reason": null,
  "mode": "LOG_ONLY",
  "gate_passed": false,
- "checks_with_outcome": 48
+ "checks_with_outcome": 58
 }

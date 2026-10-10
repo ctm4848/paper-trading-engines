@@ -1,9 +1,9 @@
 {
-  "note": "PAPER TRADING ONLY - fake money, not connected to any brokerage.",
+  "note": "PAPER TRADING ONLY - fake money, not connected to any brokerage. RESEARCH AND TRACKING ONLY: the owner never committed the $10k.",
   "strategy": "Dividend growers, equal weight, dividends tracked as cash",
-  "start_date": "2026-10-02",
+  "start_date": "2026-10-09",
   "starting_cash": 10000.0,
-  "cash": 0.0,
+  "cash": -0.0,
   "price_basis": "Unadjusted closing price on start_date (Yahoo Finance via yfinance)",
   "holdings": [
     {
@@ -11,48 +11,48 @@
       "name": "Procter & Gamble",
       "sector": "Consumer Staples",
       "streak": "70",
-      "shares": 6.900835,
-      "buy_price": 144.91,
+      "shares": 6.612445,
+      "buy_price": 151.23,
       "cost_basis": 1000.0,
-      "ttm_yield_pct_at_start": 2.96
+      "ttm_yield_pct_at_start": 2.84
     },
     {
       "ticker": "KO",
       "name": "Coca-Cola",
       "sector": "Consumer Staples",
       "streak": "64",
-      "shares": 11.675423,
-      "buy_price": 85.65,
+      "shares": 11.357183,
+      "buy_price": 88.05,
       "cost_basis": 1000.0,
-      "ttm_yield_pct_at_start": 2.45
+      "ttm_yield_pct_at_start": 2.39
     },
     {
       "ticker": "JNJ",
       "name": "Johnson & Johnson",
       "sector": "Health Care",
       "streak": "64",
-      "shares": 3.905792,
-      "buy_price": 256.03,
+      "shares": 3.824969,
+      "buy_price": 261.44,
       "cost_basis": 1000.0,
-      "ttm_yield_pct_at_start": 2.06
+      "ttm_yield_pct_at_start": 2.02
     },
     {
       "ticker": "LOW",
       "name": "Lowe's Companies",
       "sector": "Consumer Discretionary (home improvement)",
       "streak": "55 (lists vary 55-65; Lowe's itself says 'more than 25')",
-      "shares": 5.530973,
-      "buy_price": 180.8,
+      "shares": 5.376344,
+      "buy_price": 186.0,
       "cost_basis": 1000.0,
-      "ttm_yield_pct_at_start": 2.68
+      "ttm_yield_pct_at_start": 2.61
     },
     {
       "ticker": "SHW",
       "name": "Sherwin-Williams",
       "sector": "Materials (paints/coatings)",
       "streak": "48 (Feb 2026 raise 'follows 47 consecutive years')",
-      "shares": 3.129792,
-      "buy_price": 319.51,
+      "shares": 3.131263,
+      "buy_price": 319.36,
       "cost_basis": 1000.0,
       "ttm_yield_pct_at_start": 1.0
     },
@@ -61,18 +61,18 @@
       "name": "Exxon Mobil",
       "sector": "Energy",
       "streak": "43",
-      "shares": 6.097189,
-      "buy_price": 164.01,
+      "shares": 5.919261,
+      "buy_price": 168.94,
       "cost_basis": 1000.0,
-      "ttm_yield_pct_at_start": 2.51
+      "ttm_yield_pct_at_start": 2.44
     },
     {
       "ticker": "DOV",
       "name": "Dover Corp.",
       "sector": "Industrials",
       "streak": "71",
-      "shares": 5.271759,
-      "buy_price": 189.69,
+      "shares": 5.295769,
+      "buy_price": 188.83,
       "cost_basis": 1000.0,
       "ttm_yield_pct_at_start": 1.1
     },
@@ -81,122 +81,127 @@
       "name": "Consolidated Edison",
       "sector": "Utilities",
       "streak": "52",
-      "shares": 9.672115,
-      "buy_price": 103.39,
+      "shares": 9.425071,
+      "buy_price": 106.1,
       "cost_basis": 1000.0,
-      "ttm_yield_pct_at_start": 3.4
+      "ttm_yield_pct_at_start": 3.31
     },
     {
       "ticker": "FRT",
       "name": "Federal Realty Inv. Trust",
       "sector": "Real Estate",
       "streak": "59",
-      "shares": 9.372949,
-      "buy_price": 106.69,
+      "shares": 9.419743,
+      "buy_price": 106.16,
       "cost_basis": 1000.0,
-      "ttm_yield_pct_at_start": 4.26
+      "ttm_yield_pct_at_start": 4.29
     },
     {
       "ticker": "CINF",
       "name": "Cincinnati Financial",
       "sector": "Financials",
       "streak": "66",
-      "shares": 6.174745,
-      "buy_price": 161.95,
+      "shares": 6.120326,
+      "buy_price": 163.39,
       "cost_basis": 1000.0,
-      "ttm_yield_pct_at_start": 2.28
+      "ttm_yield_pct_at_start": 2.26
     }
   ],
   "benchmark": {
     "ticker": "SPY",
-    "shares": 12.993087,
-    "buy_price": 769.64,
+    "shares": 12.84406,
+    "buy_price": 778.57,
     "cost_basis": 10000.0
   },
-  "created_at": "2026-10-03T18:56:41",
+  "created_at": "2026-10-09T21:37:35",
   "last_update": {
     "as_of": "2026-10-09",
     "positions": [
       {
         "ticker": "PG",
         "price": 151.23,
-        "value": 1043.61,
+        "value": 1000.0,
         "dividends": 0.0,
-        "gain_pct": 4.36
+        "gain_pct": 0.0
       },
       {
         "ticker": "KO",
         "price": 88.05,
-        "value": 1028.02,
+        "value": 1000.0,
         "dividends": 0.0,
-        "gain_pct": 2.8
+        "gain_pct": 0.0
       },
       {
         "ticker": "JNJ",
         "price": 261.44,
-        "value": 1021.13,
+        "value": 1000.0,
         "dividends": 0.0,
-        "gain_pct": 2.11
+        "gain_pct": 0.0
       },
       {
         "ticker": "LOW",
         "price": 186.0,
-        "value": 1028.76,
+        "value": 1000.0,
         "dividends": 0.0,
-        "gain_pct": 2.88
+        "gain_pct": 0.0
       },
       {
         "ticker": "SHW",
         "price": 319.36,
-        "value": 999.53,
+        "value": 1000.0,
         "dividends": 0.0,
-        "gain_pct": -0.05
+        "gain_pct": 0.0
       },
       {
         "ticker": "XOM",
         "price": 168.94,
-        "value": 1030.06,
+        "value": 1000.0,
         "dividends": 0.0,
-        "gain_pct": 3.01
+        "gain_pct": 0.0
       },
       {
         "ticker": "DOV",
         "price": 188.83,
-        "value": 995.47,
+        "value": 1000.0,
         "dividends": 0.0,
-        "gain_pct": -0.45
+        "gain_pct": 0.0
       },
       {
         "ticker": "ED",
         "price": 106.1,
-        "value": 1026.21,
+        "value": 1000.0,
         "dividends": 0.0,
-        "gain_pct": 2.62
+        "gain_pct": 0.0
       },
       {
         "ticker": "FRT",
         "price": 106.16,
-        "value": 995.03,
+        "value": 1000.0,
         "dividends": 0.0,
-        "gain_pct": -0.5
+        "gain_pct": 0.0
       },
       {
         "ticker": "CINF",
         "price": 163.39,
-        "value": 1008.89,
+        "value": 1000.0,
         "dividends": 0.0,
-        "gain_pct": 0.89
+        "gain_pct": 0.0
       }
     ],
-    "market_value": 10176.72,
+    "market_value": 10000.0,
     "dividends_cash": 0.0,
-    "total_value": 10176.72,
-    "return_pct": 1.77,
+    "total_value": 10000.0,
+    "return_pct": 0.0,
     "spy_price": 778.57,
-    "spy_total_value": 10116.03,
+    "spy_total_value": 10000.0,
     "spy_dividends": 0.0,
-    "spy_return_pct": 1.16,
-    "lead_vs_spy": 60.69,
-    "checked_at": "2026-10-09T21:12:57"
+    "spy_return_pct": 0.0,
+    "lead_vs_spy": 0.0,
+    "checked_at": "2026-10-09T21:38:42"
+  },
+  "reset": {
+    "at_ct": "2026-10-09 21:37 CT",
+    "reason": "Scoreboard reset at the owner's request; re-based to $10,000 at the latest close",
+    "archive": "archive/pre-reset-2026-10-09/scoreboard.json"
   }
 }
