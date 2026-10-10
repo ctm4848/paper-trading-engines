@@ -7,16 +7,16 @@
  "positions": {},
  "closed": {},
  "await": {
-  "KXBTC15M-26OCT101915-15": 1791674100.0
+  "KXBTC15M-26OCT101930-30": 1791675000.0
  },
  "trades_by_day": {},
  "paused": false,
  "pause_reason": null,
- "runs": 1241,
- "last_run": 1791674105.1200252,
+ "runs": 1256,
+ "last_run": 1791675005.1194305,
  "spot_fail_streak": 0,
  "api_fail_streak": 0,
- "n_checks": 1222,
+ "n_checks": 1236,
  "hypo": {
   "base": {
    "open": {},
@@ -1491,7 +1491,7 @@
   "wins": 0,
   "realized_pnl": 0,
   "avg_pnl_c_per_contract": null,
-  "checks": 1222,
+  "checks": 1236,
   "paused": false,
   "pause_reason": null
  }
