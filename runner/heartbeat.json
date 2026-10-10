@@ -8,43 +8,43 @@
   "kalshi": {
    "dir": "kalshi-btc/engine",
    "period_s": 60,
-   "passes": 91,
-   "ok": 91,
+   "passes": 106,
+   "ok": 106,
    "fails": 0,
-   "last_start": "2026-10-10T21:45:05Z",
-   "last_end": "2026-10-10T21:45:06Z",
+   "last_start": "2026-10-10T22:00:05Z",
+   "last_end": "2026-10-10T22:00:05Z",
    "last_rc": 0,
-   "last_secs": 1.2,
-   "last_ok": "2026-10-10T21:45:06Z"
+   "last_secs": 0.3,
+   "last_ok": "2026-10-10T22:00:05Z"
   },
   "polymarket": {
    "dir": "polymarket/copy-engine",
    "period_s": 300,
-   "passes": 19,
-   "ok": 19,
+   "passes": 22,
+   "ok": 22,
    "fails": 0,
-   "last_start": "2026-10-10T21:45:05Z",
-   "last_end": "2026-10-10T21:45:07Z",
+   "last_start": "2026-10-10T22:00:05Z",
+   "last_end": "2026-10-10T22:00:06Z",
    "last_rc": 0,
-   "last_secs": 2.1,
-   "last_ok": "2026-10-10T21:45:07Z"
+   "last_secs": 1.5,
+   "last_ok": "2026-10-10T22:00:06Z"
   },
   "funding": {
    "dir": "funding-lab/engine",
    "period_s": 900,
-   "passes": 6,
-   "ok": 6,
+   "passes": 7,
+   "ok": 7,
    "fails": 0,
-   "last_start": "2026-10-10T21:31:00Z",
-   "last_end": "2026-10-10T21:31:05Z",
+   "last_start": "2026-10-10T21:46:00Z",
+   "last_end": "2026-10-10T21:46:04Z",
    "last_rc": 0,
    "last_secs": 5.0,
-   "last_ok": "2026-10-10T21:31:05Z"
+   "last_ok": "2026-10-10T21:46:04Z"
   }
  },
- "ts": 1791668753172,
- "utc": "2026-10-10T21:45:53Z",
- "last_commit_attempt": "2026-10-10T21:45:53Z",
+ "ts": 1791669654555,
+ "utc": "2026-10-10T22:00:54Z",
+ "last_commit_attempt": "2026-10-10T22:00:54Z",
  "final": false,
- "last_push": "2026-10-10T21:30:58Z"
+ "last_push": "2026-10-10T21:45:54Z"
 }
