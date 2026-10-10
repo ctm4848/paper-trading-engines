@@ -1,9 +1,9 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791612005,
- "utc": "2026-10-10T06:00:05Z",
- "n_checks": 252,
+ "ts": 1791612905,
+ "utc": "2026-10-10T06:15:05Z",
+ "n_checks": 266,
  "n_checks_with_outcome": 249,
  "brier_model": 0.17912,
  "brier_market_mid": 0.17063,
@@ -88,7 +88,7 @@
    "c_per_contract": 18.77,
    "roi": 0.6559,
    "fees": 15.41,
-   "open": 0
+   "open": 1
   },
   "ban15": {
    "n": 13,
