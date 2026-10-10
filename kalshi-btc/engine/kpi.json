@@ -1,61 +1,61 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791606605,
- "utc": "2026-10-10T04:30:05Z",
- "n_checks": 168,
- "n_checks_with_outcome": 153,
- "brier_model": 0.17514,
- "brier_market_mid": 0.16378,
- "brier_diff_model_minus_market": 0.01135,
+ "ts": 1791607505,
+ "utc": "2026-10-10T04:45:05Z",
+ "n_checks": 182,
+ "n_checks_with_outcome": 181,
+ "brier_model": 0.17658,
+ "brier_market_mid": 0.16278,
+ "brier_diff_model_minus_market": 0.01379,
  "calibration": {
   "0.0-0.1": {
-   "n": 3,
-   "model": 0.034,
-   "market": 0.012,
+   "n": 4,
+   "model": 0.037,
+   "market": 0.009,
    "actual": 0.0
   },
   "0.1-0.2": {
-   "n": 10,
-   "model": 0.141,
-   "market": 0.072,
+   "n": 11,
+   "model": 0.145,
+   "market": 0.067,
    "actual": 0.0
   },
   "0.2-0.3": {
-   "n": 11,
-   "model": 0.258,
-   "market": 0.152,
+   "n": 15,
+   "model": 0.253,
+   "market": 0.132,
    "actual": 0.0
   },
   "0.3-0.4": {
-   "n": 11,
-   "model": 0.349,
-   "market": 0.252,
+   "n": 17,
+   "model": 0.36,
+   "market": 0.242,
    "actual": 0.0
   },
   "0.4-0.5": {
-   "n": 46,
-   "model": 0.465,
-   "market": 0.455,
-   "actual": 0.239
+   "n": 58,
+   "model": 0.459,
+   "market": 0.442,
+   "actual": 0.362
   },
   "0.5-0.6": {
-   "n": 24,
-   "model": 0.547,
-   "market": 0.623,
-   "actual": 0.458
+   "n": 25,
+   "model": 0.548,
+   "market": 0.624,
+   "actual": 0.48
   },
   "0.6-0.7": {
-   "n": 17,
-   "model": 0.632,
-   "market": 0.737,
-   "actual": 0.824
+   "n": 19,
+   "model": 0.63,
+   "market": 0.738,
+   "actual": 0.842
   },
   "0.7-0.8": {
-   "n": 14,
-   "model": 0.746,
-   "market": 0.806,
-   "actual": 0.714
+   "n": 15,
+   "model": 0.745,
+   "market": 0.818,
+   "actual": 0.733
   },
   "0.8-0.9": {
    "n": 7,
@@ -82,42 +82,42 @@
  "paused": false,
  "hypothetical": {
   "base": {
-   "n": 6,
-   "wins": 3,
-   "pnl": 109.48,
-   "c_per_contract": 21.42,
-   "roi": 0.7322,
-   "fees": 7.15,
-   "open": 1
+   "n": 8,
+   "wins": 4,
+   "pnl": 133.78,
+   "c_per_contract": 19.79,
+   "roi": 0.6715,
+   "fees": 9.51,
+   "open": 0
   },
   "ban15": {
-   "n": 6,
-   "wins": 3,
-   "pnl": 109.48,
-   "c_per_contract": 21.42,
-   "roi": 0.7322,
-   "fees": 7.15,
-   "open": 1
+   "n": 8,
+   "wins": 4,
+   "pnl": 133.78,
+   "c_per_contract": 19.79,
+   "roi": 0.6715,
+   "fees": 9.51,
+   "open": 0
   }
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 153,
+  "checks_with_outcome": 181,
   "checks_needed": 2000,
   "checks_ok": false,
-  "brier_model": 0.17514,
-  "brier_market_mid": 0.16378,
+  "brier_model": 0.17658,
+  "brier_market_mid": 0.16278,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
    "base": {
-    "n": 6,
-    "pnl": 109.48,
+    "n": 8,
+    "pnl": 133.78,
     "ok": false
    },
    "ban15": {
-    "n": 6,
-    "pnl": 109.48,
+    "n": 8,
+    "pnl": 133.78,
     "ok": false
    }
   },
