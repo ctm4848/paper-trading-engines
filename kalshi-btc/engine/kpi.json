@@ -1,43 +1,43 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791626405,
- "utc": "2026-10-10T10:00:05Z",
- "n_checks": 477,
- "n_checks_with_outcome": 456,
- "brier_model": 0.17923,
- "brier_market_mid": 0.16895,
- "brier_diff_model_minus_market": 0.01028,
+ "ts": 1791627305,
+ "utc": "2026-10-10T10:15:05Z",
+ "n_checks": 491,
+ "n_checks_with_outcome": 470,
+ "brier_model": 0.17592,
+ "brier_market_mid": 0.16473,
+ "brier_diff_model_minus_market": 0.01119,
  "calibration": {
   "0.0-0.1": {
-   "n": 14,
-   "model": 0.038,
-   "market": 0.011,
+   "n": 16,
+   "model": 0.037,
+   "market": 0.01,
    "actual": 0.0
   },
   "0.1-0.2": {
-   "n": 20,
-   "model": 0.151,
-   "market": 0.06,
+   "n": 25,
+   "model": 0.154,
+   "market": 0.057,
    "actual": 0.0
   },
   "0.2-0.3": {
-   "n": 31,
-   "model": 0.249,
-   "market": 0.139,
-   "actual": 0.097
+   "n": 34,
+   "model": 0.251,
+   "market": 0.136,
+   "actual": 0.088
   },
   "0.3-0.4": {
-   "n": 54,
-   "model": 0.358,
+   "n": 57,
+   "model": 0.359,
    "market": 0.25,
-   "actual": 0.278
+   "actual": 0.263
   },
   "0.4-0.5": {
-   "n": 141,
+   "n": 142,
    "model": 0.456,
-   "market": 0.431,
-   "actual": 0.489
+   "market": 0.43,
+   "actual": 0.486
   },
   "0.5-0.6": {
    "n": 68,
@@ -82,12 +82,12 @@
  "paused": false,
  "hypothetical": {
   "base": {
-   "n": 28,
+   "n": 29,
    "wins": 10,
-   "pnl": 26.85,
-   "c_per_contract": 1.15,
-   "roi": 0.0386,
-   "fees": 32.12,
+   "pnl": 1.91,
+   "c_per_contract": 0.08,
+   "roi": 0.0026,
+   "fees": 33.54,
    "open": 1
   },
   "ban15": {
@@ -97,22 +97,22 @@
    "c_per_contract": 2.42,
    "roi": 0.0772,
    "fees": 30.67,
-   "open": 0
+   "open": 1
   }
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 456,
+  "checks_with_outcome": 470,
   "checks_needed": 2000,
   "checks_ok": false,
-  "brier_model": 0.17923,
-  "brier_market_mid": 0.16895,
+  "brier_model": 0.17592,
+  "brier_market_mid": 0.16473,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
    "base": {
-    "n": 28,
-    "pnl": 26.85,
+    "n": 29,
+    "pnl": 1.91,
     "ok": false
    },
    "ban15": {
