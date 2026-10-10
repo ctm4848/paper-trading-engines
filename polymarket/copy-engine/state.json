@@ -696,8 +696,8 @@
    "end": "2026-10-15T03:59:00Z"
   }
  },
- "runs": 176,
- "last_run": 1791651605,
+ "runs": 179,
+ "last_run": 1791652505,
  "tag_cache": {
   "israel-election-likud-of-seats": [
    "politics",
@@ -752,7 +752,7 @@
   }
  },
  "last_summary": {
-  "equity": 4981.46,
+  "equity": 4981.05,
   "cash": 4550.0,
   "deployed": 450.0,
   "open_lots": 6,
@@ -760,7 +760,7 @@
   "settled": 0,
   "avg_lag_min": 8.6,
   "avg_slippage_c": 1.53,
-  "cash_benchmark": 5000.32,
-  "vs_benchmark": -18.86
+  "cash_benchmark": 5000.33,
+  "vs_benchmark": -19.28
  }
 }
