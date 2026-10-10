@@ -1,0 +1,99 @@
+name: scorecard
+# Weekly scorecard (Fridays ~3:30 PM CT) + hourly escalation check for the PAPER-ONLY engines.
+# Cron is UTC: 20:30 UTC = 3:30 PM CDT (Mar-Nov); after Nov 1 (CST) it lands at 2:30 PM CT.
+# Escalation opens ONE GitHub Issue per flag key (no duplicates while an issue for that key is open). Issues are only
+# opened on main when repo variable ENGINES_ENABLED=true; otherwise the step only prints what it would open.
+on:
+  schedule:
+    - cron: "30 20 * * 5"
+    - cron: "37 * * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "scorecard | escalation | both"
+        default: "both"
+concurrency:
+  group: scorecard
+  cancel-in-progress: false
+permissions:
+  contents: write
+  issues: write
+jobs:
+  scorecard:
+    if: github.event_name == 'workflow_dispatch' || vars.ENGINES_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PAPER_ENGINES_ROOT: ${{ github.workspace }}
+      ONEMIN_BIN: ${{ github.workspace }}/tools/onemin
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -q -r requirements.txt
+      - name: Decide mode
+        id: mode
+        run: |
+          m="${{ inputs.mode }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ "${{ github.event.schedule }}" = "30 20 * * 5" ]; then m=both; else m=escalation; fi
+          fi
+          echo "mode=${m:-both}" >> "$GITHUB_OUTPUT"
+      - name: Weekly scorecard
+        if: steps.mode.outputs.mode != 'escalation'
+        run: |
+          (cd paper-trader && python3 test_weekly_scorecard.py > /tmp/sc_tests.log 2>&1) || { tail -20 /tmp/sc_tests.log; echo "::error::scorecard tests failed"; exit 1; }
+          python3 paper-trader/weekly_scorecard.py
+          cat paper-trader/WEEKLY.md
+      - name: Escalation check
+        id: esc
+        if: steps.mode.outputs.mode != 'scorecard'
+        run: |
+          set +e
+          python3 paper-trader/weekly_scorecard.py --escalation-check > /tmp/esc.json; rc=$?
+          set -e
+          cat /tmp/esc.json
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          [ "$rc" = "0" ] || [ "$rc" = "2" ] || { echo "::error::escalation check failed rc=$rc"; exit 1; }
+      - name: Open issues for new flags (deduped by flag key)
+        if: steps.esc.outputs.rc == '2'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LIVE: ${{ github.ref_name == 'main' && vars.ENGINES_ENABLED == 'true' }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess
+          d = json.load(open("/tmp/esc.json")); live = os.environ["LIVE"] == "true"; repo = os.environ["GITHUB_REPOSITORY"]
+          openi = json.loads(subprocess.run(["gh", "issue", "list", "--repo", repo, "--state", "open", "--label", "escalation",
+                 "--limit", "200", "--json", "title"], capture_output=True, text=True).stdout or "[]")
+          titles = {i["title"] for i in openi}
+          if live:
+              subprocess.run(["gh", "label", "create", "escalation", "--repo", repo, "--color", "d73a4a",
+                              "--description", "Paper engine escalation flag"], capture_output=True)
+          for f in d.get("new_flags", []):
+              t = f"Escalation: {f['key']}"
+              if t in titles: print("already open:", t); continue
+              body = (f"{f['msg']}\n\nPaper-trading (fake money) engine flag raised by the hourly escalation check "
+                      f"(run {os.environ.get('GITHUB_RUN_ID')}). Close this issue once handled; a new issue opens only if the flag "
+                      f"clears and fires again.")
+              if not live: print("DRY RUN, would open:", t, "|", f["msg"]); continue
+              r = subprocess.run(["gh", "issue", "create", "--repo", repo, "--title", t, "--body", body, "--label", "escalation"],
+                                 capture_output=True, text=True); print(r.stdout.strip() or r.stderr.strip())
+          PY
+      - name: Commit scorecard/escalation state
+        if: always()
+        run: |
+          git config user.name "paper-engines-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add paper-trader/WEEKLY.md paper-trader/WEEKLY.json paper-trader/escalation_state.json paper-trader/scoreboard.json paper-trader/SCOREBOARD.md 2>/dev/null || true
+          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
+          git commit -q -m "scorecard: $(date -u +%FT%TZ) (${{ steps.mode.outputs.mode }})"
+          for i in 1 2 3 4 5 6; do
+            git pull -q --rebase origin "${{ github.ref_name }}" && git push -q origin "HEAD:${{ github.ref_name }}" && { echo pushed; exit 0; }
+            sleep $((i*5))
+          done
+          echo "::error::push failed"; exit 1

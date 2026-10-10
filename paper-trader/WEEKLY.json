@@ -1,0 +1,396 @@
+{
+ "generated_utc": "2026-10-10T02:38:40Z",
+ "generated_ct": "Fri Oct 9 9:38 PM CT",
+ "window": {
+  "start_ct": "Fri Oct 9 9:37 PM CT",
+  "end_ct": "Fri Oct 9 9:38 PM CT"
+ },
+ "paper_only": true,
+ "reset": {
+  "ts": 1791599829.3365908,
+  "ct": "Fri Oct 9 9:37 PM CT",
+  "archive": "archive/pre-reset-2026-10-09"
+ },
+ "total": {
+  "start": 20000.0,
+  "equity": 20000.0,
+  "pnl": 0.0,
+  "cash_benchmark": 20000.0,
+  "vs_cash": -0.0,
+  "sleeves_counted": [
+   "Funding A",
+   "Funding B_0.006",
+   "Polymarket copy",
+   "Kalshi BTC 15m"
+  ]
+ },
+ "sleeves": [
+  {
+   "sleeve": "Funding A",
+   "start_cap": 5000.0,
+   "start_ts": 1791599829.3365908,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "open": [],
+   "status": "live, idle by design",
+   "kill_switch": false,
+   "variant": false,
+   "results_valid": null
+  },
+  {
+   "sleeve": "Funding B_0.006",
+   "start_cap": 5000.0,
+   "start_ts": 1791599829.3365908,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "open": [],
+   "status": "live, idle by design",
+   "kill_switch": false,
+   "variant": false,
+   "results_valid": null
+  },
+  {
+   "sleeve": "Polymarket copy",
+   "start_cap": 5000.0,
+   "start_ts": 1791599829.3365908,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "status": "live, delayed copy (120 min window)",
+   "kill_switch": false,
+   "variant": false,
+   "results_valid": null
+  },
+  {
+   "sleeve": "Kalshi BTC 15m",
+   "start_cap": 5000.0,
+   "start_ts": 1791599829.3365908,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "status": "shadow / log-only (no new paper trades)",
+   "kill_switch": false,
+   "variant": false,
+   "results_valid": null
+  }
+ ],
+ "variants": [
+  {
+   "sleeve": "Funding A_shadow",
+   "start_cap": 5000.0,
+   "start_ts": 1791599829.3365908,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "open": [],
+   "status": "live, idle by design",
+   "kill_switch": false,
+   "variant": true,
+   "results_valid": null
+  },
+  {
+   "sleeve": "Funding B_0.008",
+   "start_cap": 5000.0,
+   "start_ts": 1791599829.3365908,
+   "equity": 5000.0,
+   "week_pnl": 0.0,
+   "trades_week": 0,
+   "trades_total": 0,
+   "open": [],
+   "status": "live, idle by design",
+   "kill_switch": false,
+   "variant": true,
+   "results_valid": null
+  }
+ ],
+ "kalshi": {
+  "n_checks_with_outcome": 58,
+  "brier_model": 0.16919,
+  "brier_market_mid": 0.15302,
+  "clv_c": null,
+  "clv_n": 0,
+  "realized_c_per_contract": null,
+  "resolved_trades": 0,
+  "brier_diff_model_minus_market": 0.01618,
+  "equity": 5000.0,
+  "paused": false,
+  "mode": "LOG_ONLY",
+  "gate": {
+   "passed": false,
+   "checks_with_outcome": 58,
+   "checks_needed": 2000,
+   "checks_ok": false,
+   "brier_model": 0.16919,
+   "brier_market_mid": 0.15302,
+   "brier_ok": false,
+   "replay_trades_needed": 150,
+   "replay": {
+    "base": {
+     "n": 0,
+     "pnl": 0.0,
+     "ok": false
+    },
+    "ban15": {
+     "n": 0,
+     "pnl": 0.0,
+     "ok": false
+    }
+   },
+   "eligible_variants": [],
+   "checks_per_day_since_log_only": null,
+   "est_days_to_2000_checks": null,
+   "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
+  },
+  "source": "kpi.json (+events for CLV)"
+ },
+ "polymarket": {
+  "fills": 0,
+  "resolved_lots": 0,
+  "capture_rate": null,
+  "avg_clv_c": null,
+  "clv_n": 0,
+  "source": "kpi.json",
+  "avg_lag_min": null,
+  "avg_slippage_c": null,
+  "realized_pnl": 0,
+  "equity": 5000.0,
+  "vs_cash": -0.0,
+  "mode": "DELAYED_COPY",
+  "copy_window_min": 120
+ },
+ "funding": {
+  "signal_line": "BTC 24h 0.0017% vs 0.008% floor and p90 0.0083% (4h close<EMA20); 7d 0.0032% vs 0.006% Book B entry (0.008% variant) | ETH 24h -0.0024% vs 0.008% floor and p90 0.0064% (4h close<EMA20); 7d 0.0024% vs 0.006% Book B entry (0.008% variant)",
+  "classifier_consistency": {
+   "classifications_total": 0,
+   "legacy_duplicate_stories": 0,
+   "legacy_agreeing": 0,
+   "legacy_agreement_pct": null,
+   "legacy_disagreements": [],
+   "since_story_dedupe": {
+    "classifications": 0,
+    "multi_source_stories": 0,
+    "note": "one classification per story, so duplicates cannot disagree"
+   },
+   "target_pct": 90
+  },
+  "bookA_vs_btc_buy_hold": {
+   "bookA_pnl": 0.0,
+   "btc_bh": {
+    "start_ts": 1791599400000,
+    "btc_start_px": 82632.0,
+    "btc_now_px": 82632.0,
+    "value": 5000.0,
+    "pnl": 0.0,
+    "pct": 0.0
+   },
+   "diff": 0.0
+  },
+  "bookB_net_apy": {
+   "B_0.006": {
+    "net_pnl": 0.0,
+    "deployed_days": 0.0,
+    "net_apy_on_deployed": null,
+    "cash_apy": 4.0,
+    "beats_cash": null,
+    "note": "never deployed: no APY yet"
+   },
+   "B_0.008": {
+    "net_pnl": 0.0,
+    "deployed_days": 0.0,
+    "net_apy_on_deployed": null,
+    "cash_apy": 4.0,
+    "beats_cash": null,
+    "note": "never deployed: no APY yet"
+   }
+  }
+ },
+ "uptime_week": {
+  "funding": {
+   "uptime_pct": null,
+   "hours_covered": 0,
+   "hours_expected": 0,
+   "design_pct": null,
+   "design_runs": 0,
+   "design_expected": 0,
+   "cadence_s": 900
+  },
+  "polymarket": {
+   "uptime_pct": null,
+   "hours_covered": 0,
+   "hours_expected": 0,
+   "design_pct": null,
+   "design_runs": 0,
+   "design_expected": 0,
+   "cadence_s": 300
+  },
+  "kalshi": {
+   "uptime_pct": null,
+   "hours_covered": 0,
+   "hours_expected": 0,
+   "design_pct": null,
+   "design_runs": 0,
+   "design_expected": 0,
+   "cadence_s": 60
+  }
+ },
+ "uptime_48h": {
+  "funding": {
+   "uptime_pct": null,
+   "hours_covered": 0,
+   "hours_expected": 0,
+   "design_pct": null,
+   "design_runs": 0,
+   "design_expected": 0,
+   "cadence_s": 900
+  },
+  "polymarket": {
+   "uptime_pct": null,
+   "hours_covered": 0,
+   "hours_expected": 0,
+   "design_pct": null,
+   "design_runs": 0,
+   "design_expected": 0,
+   "cadence_s": 300
+  },
+  "kalshi": {
+   "uptime_pct": null,
+   "hours_covered": 0,
+   "hours_expected": 0,
+   "design_pct": null,
+   "design_runs": 0,
+   "design_expected": 0,
+   "cadence_s": 60
+  }
+ },
+ "rule_changes": [
+  {
+   "utc": "2026-10-08T13:50:00Z",
+   "sleeve": "Funding Lab",
+   "change": "news shock pauses NEW Book B entries 24h only; Book B fully unwinds only if USDT < $0.99",
+   "reason": "the owner's change #1 to the approved terms",
+   "by": "paper-trader"
+  },
+  {
+   "utc": "2026-10-10T02:10:00Z",
+   "sleeve": "Funding Lab",
+   "change": "news shocks need >=2 independent sources or 1 official OKX/SEC notice; same-story headlines clustered and classified once",
+   "reason": "Oct 8 shock came from 1 source; the CoinDesk copy of the same story was rated irrelevant (classifier consistency 0/1)",
+   "by": "paper-trader (KPI plan fix 5)"
+  },
+  {
+   "utc": "2026-10-10T02:37:09Z",
+   "sleeve": "All sleeves",
+   "change": "Scoreboard reset on Oct 9, 2026 at the owner's request; prior results archived.",
+   "reason": "the owner: plan and information available were incomplete; all books back to $5,000 (dividend basket re-based to $10,000, tracking only); rules, code and configs unchanged",
+   "by": "paper-trader",
+   "archive": "<engine>/archive/pre-reset-2026-10-09/"
+  }
+ ],
+ "dividend": {
+  "ok": true,
+  "refreshed": true,
+  "as_of": "2026-10-09",
+  "positions": [
+   {
+    "ticker": "PG",
+    "price": 151.23,
+    "value": 1000.0,
+    "dividends": 0.0,
+    "gain_pct": 0.0
+   },
+   {
+    "ticker": "KO",
+    "price": 88.05,
+    "value": 1000.0,
+    "dividends": 0.0,
+    "gain_pct": 0.0
+   },
+   {
+    "ticker": "JNJ",
+    "price": 261.44,
+    "value": 1000.0,
+    "dividends": 0.0,
+    "gain_pct": 0.0
+   },
+   {
+    "ticker": "LOW",
+    "price": 186.0,
+    "value": 1000.0,
+    "dividends": 0.0,
+    "gain_pct": 0.0
+   },
+   {
+    "ticker": "SHW",
+    "price": 319.36,
+    "value": 1000.0,
+    "dividends": 0.0,
+    "gain_pct": 0.0
+   },
+   {
+    "ticker": "XOM",
+    "price": 168.94,
+    "value": 1000.0,
+    "dividends": 0.0,
+    "gain_pct": 0.0
+   },
+   {
+    "ticker": "DOV",
+    "price": 188.83,
+    "value": 1000.0,
+    "dividends": 0.0,
+    "gain_pct": 0.0
+   },
+   {
+    "ticker": "ED",
+    "price": 106.1,
+    "value": 1000.0,
+    "dividends": 0.0,
+    "gain_pct": 0.0
+   },
+   {
+    "ticker": "FRT",
+    "price": 106.16,
+    "value": 1000.0,
+    "dividends": 0.0,
+    "gain_pct": 0.0
+   },
+   {
+    "ticker": "CINF",
+    "price": 163.39,
+    "value": 1000.0,
+    "dividends": 0.0,
+    "gain_pct": 0.0
+   }
+  ],
+  "market_value": 10000.0,
+  "dividends_cash": 0.0,
+  "total_value": 10000.0,
+  "return_pct": 0.0,
+  "spy_price": 778.57,
+  "spy_total_value": 10000.0,
+  "spy_dividends": 0.0,
+  "spy_return_pct": 0.0,
+  "lead_vs_spy": 0.0,
+  "checked_at": "2026-10-09T21:38:42"
+ },
+ "credits": {
+  "agent": "paper-trader",
+  "week": 170686,
+  "month": 170686,
+  "month_team": "899,904 of 5,000,000",
+  "week_by_model": {
+   "gpt-5": 156281,
+   "gpt-4o-mini": 768,
+   "gemini-2.5-flash": 13637
+  }
+ },
+ "escalations": [],
+ "decision": "none"
+}
