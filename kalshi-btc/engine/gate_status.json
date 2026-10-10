@@ -1,10 +1,10 @@
 {
  "passed": false,
- "checks_with_outcome": 864,
+ "checks_with_outcome": 878,
  "checks_needed": 2000,
  "checks_ok": false,
- "brier_model": 0.17892,
- "brier_market_mid": 0.16119,
+ "brier_model": 0.17997,
+ "brier_market_mid": 0.16137,
  "brier_ok": false,
  "replay_trades_needed": 150,
  "replay": {
@@ -20,7 +20,7 @@
   }
  },
  "eligible_variants": [],
- "checks_per_day_since_log_only": 1337.4,
+ "checks_per_day_since_log_only": 1337.5,
  "est_days_to_2000_checks": 0.8,
  "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
 }
