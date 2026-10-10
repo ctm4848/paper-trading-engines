@@ -17,10 +17,11 @@ while len(args) > 1 and args[0] in ("-m", "-a"):
     if args[0] == "-m": model = args[1]
     else: agent = args[1]
     args = args[2:]
-if not args: print("usage: onemin [-m model] [-a agent] prompt", file=sys.stderr); sys.exit(1)
+if not args or (args[0].startswith("-") and args[0] != "--usage"):
+    print("usage: onemin [-m model] [-a agent] prompt | onemin --usage", file=sys.stderr); sys.exit(1)
 prompt = args[0]
 key = os.environ.get("ONEMIN_AI_API_KEY")
-if not key: print("ONEMIN_AI_API_KEY not set", file=sys.stderr); sys.exit(1)
+if not key and prompt != "--usage": print("ONEMIN_AI_API_KEY not set", file=sys.stderr); sys.exit(1)
 now = datetime.datetime.now(ZoneInfo("America/Chicago")).replace(tzinfo=None)   # naive CT, same format as the box log
 day = now.strftime("%Y-%m-%d"); month = now.strftime("%Y-%m")
 calls_today = used_month = 0
@@ -32,6 +33,15 @@ if os.path.exists(LOG):
         if p[0].startswith(month):
             try: used_month += int(p[3])
             except ValueError: pass
+if prompt == "--usage":   # same output shape as the box helper (read by weekly_scorecard.py); no API call
+    by = {}
+    if os.path.exists(LOG):
+        for l in open(LOG):
+            p = l.rstrip("\n").split("\t")
+            if len(p) >= 4 and p[0].startswith(month) and p[3].isdigit(): by[p[1]] = by.get(p[1], 0) + int(p[3])
+    print(f"Month {month} total: {sum(by.values())} of {MONTHLY_CAP:,} (GitHub runner only)")
+    for k, v in by.items(): print(f"  agent {k}: {v}")
+    sys.exit(0)
 if calls_today >= DAILY_CAP:
     print(f"BUDGET STOP: {calls_today} calls today (cap {DAILY_CAP}/day)", file=sys.stderr); sys.exit(2)
 if used_month >= MONTHLY_CAP:
