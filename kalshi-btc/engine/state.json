@@ -6,35 +6,18 @@
  "peak_equity": 5000.0,
  "positions": {},
  "closed": {},
- "await": {
-  "KXBTC15M-26OCT100445-45": 1791621900.0
- },
+ "await": {},
  "trades_by_day": {},
  "paused": false,
  "pause_reason": null,
- "runs": 368,
- "last_run": 1791621905.0942888,
+ "runs": 384,
+ "last_run": 1791622805.093197,
  "spot_fail_streak": 0,
  "api_fail_streak": 0,
- "n_checks": 407,
+ "n_checks": 422,
  "hypo": {
   "base": {
-   "open": {
-    "KXBTC15M-26OCT100445-45": {
-     "ticker": "KXBTC15M-26OCT100445-45",
-     "side": "no",
-     "contracts": 58,
-     "vwap": 0.41,
-     "fee": 0.99,
-     "cost": 24.77,
-     "p_model": 0.494806322514709,
-     "p_up": 0.505193677485291,
-     "entry_ts": 1791621425.09432,
-     "tau_s": 475,
-     "strike": 82747.98,
-     "close_ts": 1791621900.0
-    }
-   },
+   "open": {},
    "closed": {
     "KXBTC15M-26OCT092245-45": {
      "ticker": "KXBTC15M-26OCT092245-45",
@@ -449,14 +432,7 @@
      "payout": 0.0,
      "pnl": -24.89,
      "settled_ts": 1791621005.0957224
-    }
-   },
-   "by_day": {
-    "2026-10-10": 24
-   }
-  },
-  "ban15": {
-   "open": {
+    },
     "KXBTC15M-26OCT100445-45": {
      "ticker": "KXBTC15M-26OCT100445-45",
      "side": "no",
@@ -469,9 +445,37 @@
      "entry_ts": 1791621425.09432,
      "tau_s": 475,
      "strike": 82747.98,
-     "close_ts": 1791621900.0
+     "close_ts": 1791621900.0,
+     "result": "no",
+     "payout": 58.0,
+     "pnl": 33.230000000000004,
+     "settled_ts": 1791621946.737969
+    },
+    "KXBTC15M-26OCT100500-00": {
+     "ticker": "KXBTC15M-26OCT100500-00",
+     "side": "no",
+     "contracts": 72,
+     "vwap": 0.33,
+     "fee": 1.12,
+     "cost": 24.88,
+     "p_model": 0.45718582876395397,
+     "p_up": 0.542814171236046,
+     "entry_ts": 1791622265.0940053,
+     "tau_s": 535,
+     "strike": 82728.43,
+     "close_ts": 1791622800.0,
+     "result": "yes",
+     "payout": 0.0,
+     "pnl": -24.88,
+     "settled_ts": 1791622805.093197
     }
    },
+   "by_day": {
+    "2026-10-10": 25
+   }
+  },
+  "ban15": {
+   "open": {},
    "closed": {
     "KXBTC15M-26OCT092245-45": {
      "ticker": "KXBTC15M-26OCT092245-45",
@@ -868,10 +872,46 @@
      "payout": 0.0,
      "pnl": -24.89,
      "settled_ts": 1791621005.0957224
+    },
+    "KXBTC15M-26OCT100445-45": {
+     "ticker": "KXBTC15M-26OCT100445-45",
+     "side": "no",
+     "contracts": 58,
+     "vwap": 0.41,
+     "fee": 0.99,
+     "cost": 24.77,
+     "p_model": 0.494806322514709,
+     "p_up": 0.505193677485291,
+     "entry_ts": 1791621425.09432,
+     "tau_s": 475,
+     "strike": 82747.98,
+     "close_ts": 1791621900.0,
+     "result": "no",
+     "payout": 58.0,
+     "pnl": 33.230000000000004,
+     "settled_ts": 1791621946.737969
+    },
+    "KXBTC15M-26OCT100500-00": {
+     "ticker": "KXBTC15M-26OCT100500-00",
+     "side": "no",
+     "contracts": 72,
+     "vwap": 0.33,
+     "fee": 1.12,
+     "cost": 24.88,
+     "p_model": 0.45718582876395397,
+     "p_up": 0.542814171236046,
+     "entry_ts": 1791622265.0940053,
+     "tau_s": 535,
+     "strike": 82728.43,
+     "close_ts": 1791622800.0,
+     "result": "yes",
+     "payout": 0.0,
+     "pnl": -24.88,
+     "settled_ts": 1791622805.093197
     }
    },
    "by_day": {
-    "2026-10-10": 23
+    "2026-10-10": 24
    }
   }
  },
@@ -891,7 +931,7 @@
   "wins": 0,
   "realized_pnl": 0,
   "avg_pnl_c_per_contract": null,
-  "checks": 407,
+  "checks": 422,
   "paused": false,
   "pause_reason": null
  }
