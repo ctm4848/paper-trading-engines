@@ -1,21 +1,21 @@
 {
  "passed": false,
- "checks_with_outcome": 58,
+ "checks_with_outcome": 71,
  "checks_needed": 2000,
  "checks_ok": false,
- "brier_model": 0.16919,
- "brier_market_mid": 0.15302,
- "brier_ok": false,
+ "brier_model": 0.19543,
+ "brier_market_mid": 0.19611,
+ "brier_ok": true,
  "replay_trades_needed": 150,
  "replay": {
   "base": {
-   "n": 0,
-   "pnl": 0.0,
+   "n": 1,
+   "pnl": 70.0,
    "ok": false
   },
   "ban15": {
-   "n": 0,
-   "pnl": 0.0,
+   "n": 1,
+   "pnl": 70.0,
    "ok": false
   }
  },
