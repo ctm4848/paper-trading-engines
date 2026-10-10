@@ -1,0 +1,95 @@
+{
+ "utc": "2026-10-10T02:12:16Z",
+ "results": {
+  "okx_funding": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "okx_candles": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "okx_index": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "okx_announcements": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "kalshi_markets": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "polymarket_data": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "polymarket_gamma": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "polymarket_clob": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "coinbase": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "kraken": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "bitstamp": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "gemini": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "rss_coindesk": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "rss_theblock": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "rss_cointelegraph": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "rss_sec": {
+   "ok": true,
+   "status": 200,
+   "snippet": ""
+  },
+  "binance_info_only": {
+   "ok": false,
+   "status": 451,
+   "snippet": "{   \"code\": 0,   \"msg\": \"Service unavailable from a restricted location according to 'b. Eligibility' in https://www.bin"
+  },
+  "bybit_info_only": {
+   "ok": false,
+   "status": 403,
+   "snippet": "{     error:The Amazon CloudFront distribution is configured to block access from your country }"
+  }
+ }
+}

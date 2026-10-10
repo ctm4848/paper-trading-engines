@@ -1,0 +1,66 @@
+name: engines
+# PAPER-ONLY trading engines (fake money). One long job (<= 5h45m) runs all three engines on their native cadence and
+# commits state every ~15 min. Only one runner at a time (global concurrency group). Successor is self-dispatched
+# near the end; the hourly schedule is the fallback. Scheduled runs only start when repo variable ENGINES_ENABLED=true.
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: "Loop length in minutes (max 345)"
+        default: "345"
+      chain:
+        description: "Dispatch a successor run at the end (true/false)"
+        default: "true"
+      only:
+        description: "Comma list of engines to run (kalshi,polymarket,funding); empty = all"
+        default: ""
+concurrency:
+  group: engines
+  cancel-in-progress: false
+permissions:
+  contents: write
+  actions: write
+jobs:
+  run:
+    if: github.event_name == 'workflow_dispatch' || vars.ENGINES_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 358
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -q -r requirements.txt
+      - name: Endpoint reachability
+        run: python3 runner/reachability.py
+      - name: Unit tests (an engine whose tests fail is not started, same as install.sh)
+        id: tests
+        run: |
+          ok=""
+          (cd kalshi-btc/engine && python3 -W ignore -m unittest -q test_kalshi) && ok="$ok,kalshi" || echo "::error::kalshi tests failed"
+          (cd polymarket/copy-engine && python3 -W ignore -m unittest -q test_copy) && ok="$ok,polymarket" || echo "::error::polymarket tests failed"
+          (cd funding-lab/engine && python3 test_engine.py > /tmp/funding_tests.log 2>&1) && ok="$ok,funding" || { tail -30 /tmp/funding_tests.log; echo "::error::funding tests failed"; }
+          echo "ok=${ok#,}" >> "$GITHUB_OUTPUT"
+      - name: Run engines
+        env:
+          ONEMIN_AI_API_KEY: ${{ secrets.ONEMIN_AI_API_KEY }}
+          ONEMIN_BIN: ${{ github.workspace }}/tools/onemin
+        run: |
+          git config user.name "paper-engines-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          want="${{ inputs.only }}"; ok="${{ steps.tests.outputs.ok }}"
+          only="$ok"
+          if [ -n "$want" ]; then only=$(python3 -c "import sys;w=set(sys.argv[1].split(','));o=sys.argv[2].split(',');print(','.join(x for x in o if x in w))" "$want" "$ok"); fi
+          [ -n "$only" ] || { echo "no engines to run"; exit 1; }
+          mins="${{ inputs.minutes }}"; mins="${mins:-345}"
+          python3 -u runner/run_loop.py --minutes "$mins" --only "$only"
+      - name: Dispatch successor
+        if: always() && (github.event_name == 'schedule' || inputs.chain == 'true') && vars.ENGINES_ENABLED == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run engines.yml --ref "${{ github.ref_name }}" -f minutes=345 -f chain=true || echo "dispatch failed; hourly schedule will start the next run"

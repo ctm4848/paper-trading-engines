@@ -1,0 +1,213 @@
+{
+ "generated_ts": 1791598111496,
+ "generated_utc": "2026-10-10T02:08:31Z",
+ "cursor": 1791597600000,
+ "start_ts": 1791466500000,
+ "paper_only": true,
+ "cash_benchmark_pnl_per_5k": 0.83,
+ "books": {
+  "A": {
+   "trades": 0,
+   "win_rate_pct": null,
+   "net_pnl": 0.0,
+   "net_pct": 0.0,
+   "price": 0.0,
+   "funding": 0.0,
+   "fees_slippage": -0.0,
+   "max_dd_pct": 0.0,
+   "time_in_market_pct": 0.0,
+   "paused": false,
+   "pause_reason": null,
+   "min_margin_ratio": null,
+   "liquidations": null,
+   "unrealized_open": 0.0,
+   "equity": 5000.0,
+   "open": []
+  },
+  "A_shadow": {
+   "trades": 0,
+   "win_rate_pct": null,
+   "net_pnl": 0.0,
+   "net_pct": 0.0,
+   "price": 0.0,
+   "funding": 0.0,
+   "fees_slippage": -0.0,
+   "max_dd_pct": 0.0,
+   "time_in_market_pct": 0.0,
+   "paused": false,
+   "pause_reason": null,
+   "min_margin_ratio": null,
+   "liquidations": null,
+   "unrealized_open": 0.0,
+   "equity": 5000.0,
+   "open": []
+  },
+  "B_0.006": {
+   "trades": 0,
+   "win_rate_pct": null,
+   "net_pnl": 0.0,
+   "net_pct": 0.0,
+   "price": 0.0,
+   "funding": 0.0,
+   "fees_slippage": -0.0,
+   "max_dd_pct": 0.0,
+   "time_in_market_pct": 0.0,
+   "paused": null,
+   "pause_reason": null,
+   "min_margin_ratio": null,
+   "liquidations": 0,
+   "unrealized_open": 0.0,
+   "equity": 5000.0,
+   "open": []
+  },
+  "B_0.008": {
+   "trades": 0,
+   "win_rate_pct": null,
+   "net_pnl": 0.0,
+   "net_pct": 0.0,
+   "price": 0.0,
+   "funding": 0.0,
+   "fees_slippage": -0.0,
+   "max_dd_pct": 0.0,
+   "time_in_market_pct": 0.0,
+   "paused": null,
+   "pause_reason": null,
+   "min_margin_ratio": null,
+   "liquidations": 0,
+   "unrealized_open": 0.0,
+   "equity": 5000.0,
+   "open": []
+  }
+ },
+ "bookA_vs_btc_buy_hold": {
+  "bookA_pnl": 0.0,
+  "btc_bh": {
+   "start_ts": 1791466500000,
+   "btc_start_px": 82114.9,
+   "btc_now_px": 82677.7,
+   "value": 5034.27,
+   "pnl": 34.27,
+   "pct": 0.69
+  },
+  "diff": -34.27
+ },
+ "bookA_decomposition": {
+  "price": 0.0,
+  "funding": 0.0,
+  "fees_slippage": -0.0,
+  "unrealized_open": 0.0
+ },
+ "A_vs_A_shadow": {
+  "A_pnl": 0.0,
+  "shadow_pnl": 0.0,
+  "vetoed_trades": 0,
+  "veto_value": -0.0,
+  "note": "A_shadow holds only trades the news veto blocked; veto_value > 0 means vetoes saved money"
+ },
+ "bookB_net_apy": {
+  "B_0.006": {
+   "net_pnl": 0.0,
+   "deployed_days": 0.0,
+   "net_apy_on_deployed": null,
+   "cash_apy": 4.0,
+   "beats_cash": null,
+   "note": "never deployed: no APY yet"
+  },
+  "B_0.008": {
+   "net_pnl": 0.0,
+   "deployed_days": 0.0,
+   "net_apy_on_deployed": null,
+   "cash_apy": 4.0,
+   "beats_cash": null,
+   "note": "never deployed: no APY yet"
+  }
+ },
+ "time_in_market_pct": {
+  "A": 0.0,
+  "A_shadow": 0.0,
+  "B_0.006": 0.0,
+  "B_0.008": 0.0
+ },
+ "signal_distance": {
+  "BTC": {
+   "funding_ts": 1791590400000,
+   "last_print": 1.66268130615e-05,
+   "tr24": 1.7246990011766665e-05,
+   "p90_30d": 8.330713194331002e-05,
+   "floor": 8e-05,
+   "bookA_needed": 8.330713194331002e-05,
+   "bookA_gap": 6.606014193154336e-05,
+   "close_below_ema20_4h": 1.0,
+   "bookA_entry_conditions_met": false,
+   "tr7d": 3.222198736923333e-05,
+   "bookB_entry_006": 6e-05,
+   "bookB_entry_008": 8e-05,
+   "bookB_exit": 3e-05,
+   "bookB_gap_006": 2.777801263076667e-05,
+   "last3_negative": false
+  },
+  "ETH": {
+   "funding_ts": 1791590400000,
+   "last_print": 3.2075761367e-05,
+   "tr24": -2.4302209001766667e-05,
+   "p90_30d": 6.415668459495668e-05,
+   "floor": 8e-05,
+   "bookA_needed": 8e-05,
+   "bookA_gap": 0.00010430220900176668,
+   "close_below_ema20_4h": 1.0,
+   "bookA_entry_conditions_met": false,
+   "tr7d": 2.4011031026833335e-05,
+   "bookB_entry_006": 6e-05,
+   "bookB_entry_008": 8e-05,
+   "bookB_exit": 3e-05,
+   "bookB_gap_006": 3.5988968973166666e-05,
+   "last3_negative": false
+  }
+ },
+ "signal_line": "BTC 24h 0.0017% vs 0.008% floor and p90 0.0083% (4h close<EMA20); 7d 0.0032% vs 0.006% Book B entry (0.008% variant) | ETH 24h -0.0024% vs 0.008% floor and p90 0.0064% (4h close<EMA20); 7d 0.0024% vs 0.006% Book B entry (0.008% variant)",
+ "classifier_consistency": {
+  "classifications_total": 3,
+  "legacy_duplicate_stories": 1,
+  "legacy_agreeing": 0,
+  "legacy_agreement_pct": 0.0,
+  "legacy_disagreements": [
+   {
+    "titles": [
+     "U.S. government moves $1 billion in bitcoin from Bitfinex hack wallet, no sale indicated",
+     "US government moves $1B in seized Bitcoin after $770M transfers"
+    ],
+    "sources": [
+     "coindesk",
+     "cointelegraph"
+    ],
+    "types": [
+     "irrelevant",
+     "shock"
+    ],
+    "conf": [
+     0.1,
+     0.8
+    ]
+   }
+  ],
+  "since_story_dedupe": {
+   "classifications": 0,
+   "multi_source_stories": 0,
+   "note": "one classification per story, so duplicates cannot disagree"
+  },
+  "target_pct": 90
+ },
+ "kill_switch": {
+  "A": false,
+  "A_shadow": false
+ },
+ "news": {
+  "b_pause_until": 1791560761509,
+  "vetoes": {},
+  "credits_total": 590,
+  "class_count": {
+   "2026-10-08": 2,
+   "2026-10-09": 1
+  }
+ }
+}

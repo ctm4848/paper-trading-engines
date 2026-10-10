@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.lock
+loop.pid
+loop.log.1
+.tmp-*
+.venv/
