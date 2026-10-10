@@ -1,9 +1,9 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791673205,
- "utc": "2026-10-10T23:00:05Z",
- "n_checks": 1207,
+ "ts": 1791674105,
+ "utc": "2026-10-10T23:15:05Z",
+ "n_checks": 1221,
  "n_checks_with_outcome": 1185,
  "brier_model": 0.18601,
  "brier_market_mid": 0.17009,
