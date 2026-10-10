@@ -1,7 +1,7 @@
 {
- "generated_ts": 1791648069614,
- "generated_utc": "2026-10-10T16:01:09Z",
- "cursor": 1791647700000,
+ "generated_ts": 1791648966201,
+ "generated_utc": "2026-10-10T16:16:06Z",
+ "cursor": 1791648600000,
  "start_ts": 1791599400000,
  "paper_only": true,
  "cash_benchmark_pnl_per_5k": 0.31,
@@ -84,12 +84,12 @@
   "btc_bh": {
    "start_ts": 1791599400000,
    "btc_start_px": 82632.0,
-   "btc_now_px": 83057.6,
-   "value": 5025.75,
-   "pnl": 25.75,
-   "pct": 0.52
+   "btc_now_px": 83029.2,
+   "value": 5024.03,
+   "pnl": 24.03,
+   "pct": 0.48
   },
-  "diff": -25.75
+  "diff": -24.03
  },
  "bookA_decomposition": {
   "price": 0.0,
@@ -192,5 +192,5 @@
    "2026-10-10": 1
   }
  },
- "runs_last_24h": 55
+ "runs_last_24h": 56
 }

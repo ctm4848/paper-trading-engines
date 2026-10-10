@@ -1,13 +1,13 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791648905,
- "utc": "2026-10-10T16:15:05Z",
- "n_checks": 827,
- "n_checks_with_outcome": 795,
- "brier_model": 0.1797,
- "brier_market_mid": 0.16175,
- "brier_diff_model_minus_market": 0.01795,
+ "ts": 1791649805,
+ "utc": "2026-10-10T16:30:05Z",
+ "n_checks": 841,
+ "n_checks_with_outcome": 809,
+ "brier_model": 0.17908,
+ "brier_market_mid": 0.16098,
+ "brier_diff_model_minus_market": 0.0181,
  "calibration": {
   "0.0-0.1": {
    "n": 25,
@@ -16,34 +16,34 @@
    "actual": 0.04
   },
   "0.1-0.2": {
-   "n": 41,
-   "model": 0.152,
-   "market": 0.058,
-   "actual": 0.073
+   "n": 44,
+   "model": 0.154,
+   "market": 0.061,
+   "actual": 0.068
   },
   "0.2-0.3": {
-   "n": 62,
-   "model": 0.247,
-   "market": 0.115,
-   "actual": 0.065
+   "n": 66,
+   "model": 0.248,
+   "market": 0.118,
+   "actual": 0.061
   },
   "0.3-0.4": {
-   "n": 84,
+   "n": 85,
    "model": 0.362,
-   "market": 0.244,
-   "actual": 0.274
+   "market": 0.242,
+   "actual": 0.271
   },
   "0.4-0.5": {
-   "n": 226,
+   "n": 229,
    "model": 0.456,
    "market": 0.427,
-   "actual": 0.487
+   "actual": 0.48
   },
   "0.5-0.6": {
-   "n": 145,
-   "model": 0.549,
-   "market": 0.63,
-   "actual": 0.614
+   "n": 148,
+   "model": 0.548,
+   "market": 0.628,
+   "actual": 0.601
   },
   "0.6-0.7": {
    "n": 80,
@@ -102,11 +102,11 @@
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 795,
+  "checks_with_outcome": 809,
   "checks_needed": 2000,
   "checks_ok": false,
-  "brier_model": 0.1797,
-  "brier_market_mid": 0.16175,
+  "brier_model": 0.17908,
+  "brier_market_mid": 0.16098,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
@@ -122,7 +122,7 @@
    }
   },
   "eligible_variants": [],
-  "checks_per_day_since_log_only": 1336.9,
+  "checks_per_day_since_log_only": 1337.0,
   "est_days_to_2000_checks": 0.9,
   "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
  }
