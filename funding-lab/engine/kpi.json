@@ -1,7 +1,7 @@
 {
- "generated_ts": 1791675964866,
- "generated_utc": "2026-10-10T23:46:04Z",
- "cursor": 1791675600000,
+ "generated_ts": 1791676867845,
+ "generated_utc": "2026-10-11T00:01:07Z",
+ "cursor": 1791676500000,
  "start_ts": 1791599400000,
  "paper_only": true,
  "cash_benchmark_pnl_per_5k": 0.49,
@@ -84,12 +84,12 @@
   "btc_bh": {
    "start_ts": 1791599400000,
    "btc_start_px": 82632.0,
-   "btc_now_px": 83026.8,
-   "value": 5023.89,
-   "pnl": 23.89,
-   "pct": 0.48
+   "btc_now_px": 82985.1,
+   "value": 5021.37,
+   "pnl": 21.37,
+   "pct": 0.43
   },
-  "diff": -23.89
+  "diff": -21.37
  },
  "bookA_decomposition": {
   "price": 0.0,
@@ -130,41 +130,41 @@
  },
  "signal_distance": {
   "BTC": {
-   "funding_ts": 1791648000000,
-   "last_print": 1.12787516257e-05,
-   "tr24": 2.37391558032e-05,
+   "funding_ts": 1791676800000,
+   "last_print": -2.1973068193e-05,
+   "tr24": 1.0872528718366663e-05,
    "p90_30d": 8.330713194331002e-05,
    "floor": 8e-05,
    "bookA_needed": 8.330713194331002e-05,
-   "bookA_gap": 5.956797614011002e-05,
-   "close_below_ema20_4h": 0.0,
+   "bookA_gap": 7.243460322494335e-05,
+   "close_below_ema20_4h": 1.0,
    "bookA_entry_conditions_met": false,
-   "tr7d": 3.174440034954762e-05,
+   "tr7d": 2.9368976929876192e-05,
    "bookB_entry_006": 6e-05,
    "bookB_entry_008": 8e-05,
    "bookB_exit": 3e-05,
-   "bookB_gap_006": 2.825559965045238e-05,
+   "bookB_gap_006": 3.063102307012381e-05,
    "last3_negative": false
   },
   "ETH": {
-   "funding_ts": 1791648000000,
-   "last_print": -2.4071924614e-06,
-   "tr24": 1.4781808151033332e-05,
+   "funding_ts": 1791676800000,
+   "last_print": -4.42121360806e-05,
+   "tr24": -1.0647490998166666e-05,
    "p90_30d": 6.415668459495668e-05,
    "floor": 8e-05,
    "bookA_needed": 8e-05,
-   "bookA_gap": 6.521819184896667e-05,
+   "bookA_gap": 9.064749099816667e-05,
    "close_below_ema20_4h": 1.0,
    "bookA_entry_conditions_met": false,
-   "tr7d": 2.191896277202857e-05,
+   "tr7d": 1.8074091914766668e-05,
    "bookB_entry_006": 6e-05,
    "bookB_entry_008": 8e-05,
    "bookB_exit": 3e-05,
-   "bookB_gap_006": 3.808103722797143e-05,
+   "bookB_gap_006": 4.1925908085233334e-05,
    "last3_negative": false
   }
  },
- "signal_line": "BTC 24h 0.0024% vs 0.008% floor and p90 0.0083%; 7d 0.0032% vs 0.006% Book B entry (0.008% variant) | ETH 24h 0.0015% vs 0.008% floor and p90 0.0064% (4h close<EMA20); 7d 0.0022% vs 0.006% Book B entry (0.008% variant)",
+ "signal_line": "BTC 24h 0.0011% vs 0.008% floor and p90 0.0083% (4h close<EMA20); 7d 0.0029% vs 0.006% Book B entry (0.008% variant) | ETH 24h -0.0011% vs 0.008% floor and p90 0.0064% (4h close<EMA20); 7d 0.0018% vs 0.006% Book B entry (0.008% variant)",
  "classifier_consistency": {
   "classifications_total": 1,
   "legacy_duplicate_stories": 0,
@@ -192,5 +192,5 @@
    "2026-10-10": 1
   }
  },
- "runs_last_24h": 86
+ "runs_last_24h": 87
 }
