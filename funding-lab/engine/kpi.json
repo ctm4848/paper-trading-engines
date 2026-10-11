@@ -1,10 +1,10 @@
 {
- "generated_ts": 1791718264609,
- "generated_utc": "2026-10-11T11:31:04Z",
- "cursor": 1791717900000,
+ "generated_ts": 1791719164609,
+ "generated_utc": "2026-10-11T11:46:04Z",
+ "cursor": 1791718800000,
  "start_ts": 1791599400000,
  "paper_only": true,
- "cash_benchmark_pnl_per_5k": 0.75,
+ "cash_benchmark_pnl_per_5k": 0.76,
  "books": {
   "A": {
    "trades": 0,
@@ -84,12 +84,12 @@
   "btc_bh": {
    "start_ts": 1791599400000,
    "btc_start_px": 82632.0,
-   "btc_now_px": 83069.1,
-   "value": 5026.45,
-   "pnl": 26.45,
-   "pct": 0.53
+   "btc_now_px": 83056.8,
+   "value": 5025.7,
+   "pnl": 25.7,
+   "pct": 0.51
   },
-  "diff": -26.45
+  "diff": -25.7
  },
  "bookA_decomposition": {
   "price": 0.0,
