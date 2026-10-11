@@ -1,10 +1,10 @@
 {
  "passed": false,
- "checks_with_outcome": 2233,
+ "checks_with_outcome": 2261,
  "checks_needed": 2000,
  "checks_ok": true,
- "brier_model": 0.18013,
- "brier_market_mid": 0.16702,
+ "brier_model": 0.18,
+ "brier_market_mid": 0.16691,
  "brier_ok": false,
  "replay_trades_needed": 150,
  "replay": {
