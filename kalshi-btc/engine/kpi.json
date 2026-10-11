@@ -1,9 +1,9 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791684005,
- "utc": "2026-10-11T02:00:05Z",
- "n_checks": 1376,
+ "ts": 1791684905,
+ "utc": "2026-10-11T02:15:05Z",
+ "n_checks": 1391,
  "n_checks_with_outcome": 1352,
  "brier_model": 0.18826,
  "brier_market_mid": 0.17526,
@@ -88,7 +88,7 @@
    "c_per_contract": 5.3,
    "roi": 0.1872,
    "fees": 56.19,
-   "open": 0
+   "open": 1
   },
   "ban15": {
    "n": 48,
@@ -97,7 +97,7 @@
    "c_per_contract": 5.51,
    "roi": 0.1875,
    "fees": 55.92,
-   "open": 0
+   "open": 1
   }
  },
  "gate": {
@@ -122,7 +122,7 @@
    }
   },
   "eligible_variants": [],
-  "checks_per_day_since_log_only": 1342.8,
+  "checks_per_day_since_log_only": 1343.8,
   "est_days_to_2000_checks": 0.5,
   "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
  }
