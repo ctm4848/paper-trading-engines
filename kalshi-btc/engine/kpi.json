@@ -1,13 +1,13 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791685805,
- "utc": "2026-10-11T02:30:05Z",
- "n_checks": 1405,
- "n_checks_with_outcome": 1381,
- "brier_model": 0.18886,
- "brier_market_mid": 0.17688,
- "brier_diff_model_minus_market": 0.01198,
+ "ts": 1791686705,
+ "utc": "2026-10-11T02:45:05Z",
+ "n_checks": 1419,
+ "n_checks_with_outcome": 1394,
+ "brier_model": 0.18781,
+ "brier_market_mid": 0.17567,
+ "brier_diff_model_minus_market": 0.01215,
  "calibration": {
   "0.0-0.1": {
    "n": 42,
@@ -40,33 +40,33 @@
    "actual": 0.426
   },
   "0.5-0.6": {
-   "n": 317,
+   "n": 318,
    "model": 0.545,
    "market": 0.632,
-   "actual": 0.549
+   "actual": 0.55
   },
   "0.6-0.7": {
-   "n": 153,
+   "n": 156,
    "model": 0.644,
-   "market": 0.783,
-   "actual": 0.778
+   "market": 0.782,
+   "actual": 0.782
   },
   "0.7-0.8": {
-   "n": 103,
+   "n": 109,
    "model": 0.74,
-   "market": 0.866,
-   "actual": 0.864
+   "market": 0.864,
+   "actual": 0.872
   },
   "0.8-0.9": {
-   "n": 52,
-   "model": 0.84,
-   "market": 0.932,
-   "actual": 0.904
+   "n": 53,
+   "model": 0.841,
+   "market": 0.933,
+   "actual": 0.906
   },
   "0.9-1.0": {
-   "n": 57,
-   "model": 0.962,
-   "market": 0.981,
+   "n": 59,
+   "model": 0.963,
+   "market": 0.982,
    "actual": 1.0
   }
  },
@@ -82,12 +82,12 @@
  "paused": false,
  "hypothetical": {
   "base": {
-   "n": 50,
+   "n": 51,
    "wins": 19,
-   "pnl": 234.86,
-   "c_per_contract": 5.42,
-   "roi": 0.1889,
-   "fees": 58.2,
+   "pnl": 209.89,
+   "c_per_contract": 4.63,
+   "roi": 0.1655,
+   "fees": 59.65,
    "open": 0
   },
   "ban15": {
@@ -102,17 +102,17 @@
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 1381,
+  "checks_with_outcome": 1394,
   "checks_needed": 2000,
   "checks_ok": false,
-  "brier_model": 0.18886,
-  "brier_market_mid": 0.17688,
+  "brier_model": 0.18781,
+  "brier_market_mid": 0.17567,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
    "base": {
-    "n": 50,
-    "pnl": 234.86,
+    "n": 51,
+    "pnl": 209.89,
     "ok": false
    },
    "ban15": {
