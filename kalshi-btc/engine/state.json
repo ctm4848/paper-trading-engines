@@ -7,16 +7,16 @@
  "positions": {},
  "closed": {},
  "await": {
-  "KXBTC15M-26OCT110645-45": 1791715500.0
+  "KXBTC15M-26OCT110700-00": 1791716400.0
  },
  "trades_by_day": {},
  "paused": false,
  "pause_reason": null,
- "runs": 1933,
- "last_run": 1791715505.1243994,
+ "runs": 1948,
+ "last_run": 1791716405.1203856,
  "spot_fail_streak": 0,
  "api_fail_streak": 0,
- "n_checks": 1869,
+ "n_checks": 1883,
  "hypo": {
   "base": {
    "open": {},
@@ -1469,19 +1469,19 @@
   },
   "ban15": {
    "open": {
-    "KXBTC15M-26OCT110645-45": {
-     "ticker": "KXBTC15M-26OCT110645-45",
-     "side": "yes",
-     "contracts": 66,
-     "vwap": 0.36,
-     "fee": 1.07,
-     "cost": 24.83,
-     "p_model": 0.44025308861628204,
-     "p_up": 0.44025308861628204,
-     "entry_ts": 1791714965.122461,
-     "tau_s": 535,
-     "strike": 82915.9,
-     "close_ts": 1791715500.0
+    "KXBTC15M-26OCT110700-00": {
+     "ticker": "KXBTC15M-26OCT110700-00",
+     "side": "no",
+     "contracts": 63,
+     "vwap": 0.38,
+     "fee": 1.04,
+     "cost": 24.98,
+     "p_model": 0.4865217653446512,
+     "p_up": 0.5134782346553488,
+     "entry_ts": 1791715805.1225438,
+     "tau_s": 595,
+     "strike": 82899.33,
+     "close_ts": 1791716400.0
     }
    },
    "closed": {
@@ -2870,11 +2870,29 @@
      "payout": 0.0,
      "pnl": -25.0,
      "settled_ts": 1791714665.1218598
+    },
+    "KXBTC15M-26OCT110645-45": {
+     "ticker": "KXBTC15M-26OCT110645-45",
+     "side": "yes",
+     "contracts": 66,
+     "vwap": 0.36,
+     "fee": 1.07,
+     "cost": 24.83,
+     "p_model": 0.44025308861628204,
+     "p_up": 0.44025308861628204,
+     "entry_ts": 1791714965.122461,
+     "tau_s": 535,
+     "strike": 82915.9,
+     "close_ts": 1791715500.0,
+     "result": "no",
+     "payout": 0.0,
+     "pnl": -24.83,
+     "settled_ts": 1791715565.121805
     }
    },
    "by_day": {
     "2026-10-10": 40,
-    "2026-10-11": 38
+    "2026-10-11": 39
    }
   }
  },
@@ -2894,7 +2912,7 @@
   "wins": 0,
   "realized_pnl": 0,
   "avg_pnl_c_per_contract": null,
-  "checks": 1869,
+  "checks": 1883,
   "paused": false,
   "pause_reason": null
  }
