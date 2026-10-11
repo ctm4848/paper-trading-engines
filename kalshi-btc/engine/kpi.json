@@ -1,13 +1,13 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791733505,
- "utc": "2026-10-11T15:45:05Z",
- "n_checks": 2150,
- "n_checks_with_outcome": 2102,
- "brier_model": 0.18254,
- "brier_market_mid": 0.16748,
- "brier_diff_model_minus_market": 0.01506,
+ "ts": 1791734405,
+ "utc": "2026-10-11T16:00:05Z",
+ "n_checks": 2164,
+ "n_checks_with_outcome": 2114,
+ "brier_model": 0.18179,
+ "brier_market_mid": 0.16677,
+ "brier_diff_model_minus_market": 0.01502,
  "calibration": {
   "0.0-0.1": {
    "n": 78,
@@ -34,10 +34,10 @@
    "actual": 0.207
   },
   "0.4-0.5": {
-   "n": 522,
+   "n": 524,
    "model": 0.458,
-   "market": 0.435,
-   "actual": 0.454
+   "market": 0.436,
+   "actual": 0.456
   },
   "0.5-0.6": {
    "n": 483,
@@ -52,21 +52,21 @@
    "actual": 0.781
   },
   "0.7-0.8": {
-   "n": 167,
+   "n": 168,
    "model": 0.744,
    "market": 0.872,
-   "actual": 0.886
+   "actual": 0.887
   },
   "0.8-0.9": {
-   "n": 89,
-   "model": 0.846,
-   "market": 0.943,
-   "actual": 0.944
+   "n": 91,
+   "model": 0.847,
+   "market": 0.942,
+   "actual": 0.945
   },
   "0.9-1.0": {
-   "n": 87,
-   "model": 0.961,
-   "market": 0.983,
+   "n": 94,
+   "model": 0.962,
+   "market": 0.982,
    "actual": 0.989
   }
  },
@@ -102,11 +102,11 @@
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 2102,
+  "checks_with_outcome": 2114,
   "checks_needed": 2000,
   "checks_ok": true,
-  "brier_model": 0.18254,
-  "brier_market_mid": 0.16748,
+  "brier_model": 0.18179,
+  "brier_market_mid": 0.16677,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
