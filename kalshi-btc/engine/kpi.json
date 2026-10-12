@@ -1,13 +1,13 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791779405,
- "utc": "2026-10-12T04:30:05Z",
- "n_checks": 2867,
- "n_checks_with_outcome": 2792,
- "brier_model": 0.17332,
- "brier_market_mid": 0.1598,
- "brier_diff_model_minus_market": 0.01351,
+ "ts": 1791780305,
+ "utc": "2026-10-12T04:45:05Z",
+ "n_checks": 2881,
+ "n_checks_with_outcome": 2819,
+ "brier_model": 0.17263,
+ "brier_market_mid": 0.15923,
+ "brier_diff_model_minus_market": 0.0134,
  "calibration": {
   "0.0-0.1": {
    "n": 150,
@@ -28,34 +28,34 @@
    "actual": 0.149
   },
   "0.3-0.4": {
-   "n": 277,
+   "n": 278,
    "model": 0.356,
    "market": 0.262,
-   "actual": 0.242
+   "actual": 0.245
   },
   "0.4-0.5": {
-   "n": 625,
+   "n": 629,
    "model": 0.458,
    "market": 0.434,
-   "actual": 0.458
+   "actual": 0.461
   },
   "0.5-0.6": {
-   "n": 570,
+   "n": 572,
    "model": 0.545,
    "market": 0.609,
-   "actual": 0.54
+   "actual": 0.542
   },
   "0.6-0.7": {
-   "n": 344,
+   "n": 345,
    "model": 0.644,
    "market": 0.762,
-   "actual": 0.779
+   "actual": 0.78
   },
   "0.7-0.8": {
-   "n": 220,
+   "n": 226,
    "model": 0.746,
-   "market": 0.856,
-   "actual": 0.909
+   "market": 0.854,
+   "actual": 0.912
   },
   "0.8-0.9": {
    "n": 137,
@@ -64,10 +64,10 @@
    "actual": 0.964
   },
   "0.9-1.0": {
-   "n": 152,
-   "model": 0.958,
+   "n": 165,
+   "model": 0.96,
    "market": 0.97,
-   "actual": 0.974
+   "actual": 0.976
   }
  },
  "resolved_trades": 0,
@@ -82,47 +82,47 @@
  "paused": false,
  "hypothetical": {
   "base": {
-   "n": 95,
+   "n": 96,
    "wins": 28,
-   "pnl": -390.04,
-   "c_per_contract": -4.4,
-   "roi": -0.1666,
-   "fees": 109.0,
-   "open": 1
+   "pnl": -415.02,
+   "c_per_contract": -4.65,
+   "roi": -0.1754,
+   "fees": 110.04,
+   "open": 0
   },
   "ban15": {
-   "n": 94,
+   "n": 95,
    "wins": 29,
-   "pnl": -226.6,
-   "c_per_contract": -2.92,
-   "roi": -0.0979,
-   "fees": 105.81,
-   "open": 1
+   "pnl": -251.58,
+   "c_per_contract": -3.22,
+   "roi": -0.1075,
+   "fees": 106.85,
+   "open": 0
   }
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 2792,
+  "checks_with_outcome": 2819,
   "checks_needed": 2000,
   "checks_ok": true,
-  "brier_model": 0.17332,
-  "brier_market_mid": 0.1598,
+  "brier_model": 0.17263,
+  "brier_market_mid": 0.15923,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
    "base": {
-    "n": 95,
-    "pnl": -390.04,
+    "n": 96,
+    "pnl": -415.02,
     "ok": false
    },
    "ban15": {
-    "n": 94,
-    "pnl": -226.6,
+    "n": 95,
+    "pnl": -251.58,
     "ok": false
    }
   },
   "eligible_variants": [],
-  "checks_per_day_since_log_only": 1346.8,
+  "checks_per_day_since_log_only": 1346.7,
   "est_days_to_2000_checks": 0.0,
   "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
  }
