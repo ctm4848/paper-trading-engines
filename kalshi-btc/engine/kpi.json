@@ -1,40 +1,40 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791802805,
- "utc": "2026-10-12T11:00:05Z",
- "n_checks": 3234,
- "n_checks_with_outcome": 3160,
- "brier_model": 0.16824,
- "brier_market_mid": 0.15569,
- "brier_diff_model_minus_market": 0.01255,
+ "ts": 1791803705,
+ "utc": "2026-10-12T11:15:05Z",
+ "n_checks": 3248,
+ "n_checks_with_outcome": 3174,
+ "brier_model": 0.16766,
+ "brier_market_mid": 0.15514,
+ "brier_diff_model_minus_market": 0.01252,
  "calibration": {
   "0.0-0.1": {
-   "n": 232,
+   "n": 238,
    "model": 0.037,
    "market": 0.028,
    "actual": 0.013
   },
   "0.1-0.2": {
-   "n": 152,
+   "n": 157,
    "model": 0.15,
-   "market": 0.08,
-   "actual": 0.053
+   "market": 0.081,
+   "actual": 0.051
   },
   "0.2-0.3": {
-   "n": 216,
+   "n": 217,
    "model": 0.249,
    "market": 0.146,
-   "actual": 0.139
+   "actual": 0.138
   },
   "0.3-0.4": {
-   "n": 307,
+   "n": 308,
    "model": 0.355,
    "market": 0.267,
-   "actual": 0.264
+   "actual": 0.263
   },
   "0.4-0.5": {
-   "n": 664,
+   "n": 665,
    "model": 0.457,
    "market": 0.433,
    "actual": 0.462
@@ -82,12 +82,12 @@
  "paused": false,
  "hypothetical": {
   "base": {
-   "n": 117,
+   "n": 118,
    "wins": 32,
-   "pnl": -679.96,
-   "c_per_contract": -5.9,
-   "roi": -0.236,
-   "fees": 134.41,
+   "pnl": -704.95,
+   "c_per_contract": -5.94,
+   "roi": -0.2426,
+   "fees": 135.94,
    "open": 0
   },
   "ban15": {
@@ -102,17 +102,17 @@
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 3160,
+  "checks_with_outcome": 3174,
   "checks_needed": 2000,
   "checks_ok": true,
-  "brier_model": 0.16824,
-  "brier_market_mid": 0.15569,
+  "brier_model": 0.16766,
+  "brier_market_mid": 0.15514,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
    "base": {
-    "n": 117,
-    "pnl": -679.96,
+    "n": 118,
+    "pnl": -704.95,
     "ok": false
    },
    "ban15": {
