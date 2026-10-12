@@ -7,34 +7,19 @@
  "positions": {},
  "closed": {},
  "await": {
-  "KXBTC15M-26OCT112115-15": 1791767700.0
+  "KXBTC15M-26OCT112130-30": 1791768600.0
  },
  "trades_by_day": {},
  "paused": false,
  "pause_reason": null,
- "runs": 2806,
- "last_run": 1791767705.1207001,
+ "runs": 2821,
+ "last_run": 1791768605.1207778,
  "spot_fail_streak": 0,
  "api_fail_streak": 0,
- "n_checks": 2685,
+ "n_checks": 2699,
  "hypo": {
   "base": {
-   "open": {
-    "KXBTC15M-26OCT112115-15": {
-     "ticker": "KXBTC15M-26OCT112115-15",
-     "side": "no",
-     "contracts": 51,
-     "vwap": 0.47,
-     "fee": 0.89,
-     "cost": 24.86,
-     "p_model": 0.5470349963749304,
-     "p_up": 0.4529650036250696,
-     "entry_ts": 1791767285.12281,
-     "tau_s": 415,
-     "strike": 83844.61,
-     "close_ts": 1791767700.0
-    }
-   },
+   "open": {},
    "closed": {
     "KXBTC15M-26OCT092245-45": {
      "ticker": "KXBTC15M-26OCT092245-45",
@@ -1547,16 +1532,7 @@
      "payout": 0.0,
      "pnl": -24.98,
      "settled_ts": 1791766805.1072636
-    }
-   },
-   "by_day": {
-    "2026-10-10": 40,
-    "2026-10-11": 40,
-    "2026-10-12": 5
-   }
-  },
-  "ban15": {
-   "open": {
+    },
     "KXBTC15M-26OCT112115-15": {
      "ticker": "KXBTC15M-26OCT112115-15",
      "side": "no",
@@ -1569,9 +1545,21 @@
      "entry_ts": 1791767285.12281,
      "tau_s": 415,
      "strike": 83844.61,
-     "close_ts": 1791767700.0
+     "close_ts": 1791767700.0,
+     "result": "yes",
+     "payout": 0.0,
+     "pnl": -24.86,
+     "settled_ts": 1791767765.1195247
     }
    },
+   "by_day": {
+    "2026-10-10": 40,
+    "2026-10-11": 40,
+    "2026-10-12": 5
+   }
+  },
+  "ban15": {
+   "open": {},
    "closed": {
     "KXBTC15M-26OCT092245-45": {
      "ticker": "KXBTC15M-26OCT092245-45",
@@ -3066,6 +3054,24 @@
      "payout": 0.0,
      "pnl": -24.63,
      "settled_ts": 1791765965.1079135
+    },
+    "KXBTC15M-26OCT112115-15": {
+     "ticker": "KXBTC15M-26OCT112115-15",
+     "side": "no",
+     "contracts": 51,
+     "vwap": 0.47,
+     "fee": 0.89,
+     "cost": 24.86,
+     "p_model": 0.5470349963749304,
+     "p_up": 0.4529650036250696,
+     "entry_ts": 1791767285.12281,
+     "tau_s": 415,
+     "strike": 83844.61,
+     "close_ts": 1791767700.0,
+     "result": "yes",
+     "payout": 0.0,
+     "pnl": -24.86,
+     "settled_ts": 1791767765.1195247
     }
    },
    "by_day": {
@@ -3091,7 +3097,7 @@
   "wins": 0,
   "realized_pnl": 0,
   "avg_pnl_c_per_contract": null,
-  "checks": 2685,
+  "checks": 2699,
   "paused": false,
   "pause_reason": null
  }
