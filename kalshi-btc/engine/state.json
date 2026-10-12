@@ -6,17 +6,15 @@
  "peak_equity": 5000.0,
  "positions": {},
  "closed": {},
- "await": {
-  "KXBTC15M-26OCT112130-30": 1791768600.0
- },
+ "await": {},
  "trades_by_day": {},
  "paused": false,
  "pause_reason": null,
- "runs": 2821,
- "last_run": 1791768605.1207778,
+ "runs": 2836,
+ "last_run": 1791769505.1202972,
  "spot_fail_streak": 0,
  "api_fail_streak": 0,
- "n_checks": 2699,
+ "n_checks": 2713,
  "hypo": {
   "base": {
    "open": {},
@@ -1550,12 +1548,30 @@
      "payout": 0.0,
      "pnl": -24.86,
      "settled_ts": 1791767765.1195247
+    },
+    "KXBTC15M-26OCT112145-45": {
+     "ticker": "KXBTC15M-26OCT112145-45",
+     "side": "yes",
+     "contracts": 76,
+     "vwap": 0.31,
+     "fee": 1.14,
+     "cost": 24.7,
+     "p_model": 0.4193893449704784,
+     "p_up": 0.4193893449704784,
+     "entry_ts": 1791768965.1232758,
+     "tau_s": 535,
+     "strike": 83695.59,
+     "close_ts": 1791769500.0,
+     "result": "no",
+     "payout": 0.0,
+     "pnl": -24.7,
+     "settled_ts": 1791769505.1202972
     }
    },
    "by_day": {
     "2026-10-10": 40,
     "2026-10-11": 40,
-    "2026-10-12": 5
+    "2026-10-12": 6
    }
   },
   "ban15": {
@@ -3072,12 +3088,30 @@
      "payout": 0.0,
      "pnl": -24.86,
      "settled_ts": 1791767765.1195247
+    },
+    "KXBTC15M-26OCT112145-45": {
+     "ticker": "KXBTC15M-26OCT112145-45",
+     "side": "yes",
+     "contracts": 76,
+     "vwap": 0.31,
+     "fee": 1.14,
+     "cost": 24.7,
+     "p_model": 0.4193893449704784,
+     "p_up": 0.4193893449704784,
+     "entry_ts": 1791768965.1232758,
+     "tau_s": 535,
+     "strike": 83695.59,
+     "close_ts": 1791769500.0,
+     "result": "no",
+     "payout": 0.0,
+     "pnl": -24.7,
+     "settled_ts": 1791769505.1202972
     }
    },
    "by_day": {
     "2026-10-10": 40,
     "2026-10-11": 40,
-    "2026-10-12": 4
+    "2026-10-12": 5
    }
   }
  },
@@ -3097,7 +3131,7 @@
   "wins": 0,
   "realized_pnl": 0,
   "avg_pnl_c_per_contract": null,
-  "checks": 2699,
+  "checks": 2713,
   "paused": false,
   "pause_reason": null
  }
