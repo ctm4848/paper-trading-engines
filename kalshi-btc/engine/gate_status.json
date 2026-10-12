@@ -1,16 +1,16 @@
 {
  "passed": false,
- "checks_with_outcome": 2966,
+ "checks_with_outcome": 2979,
  "checks_needed": 2000,
  "checks_ok": true,
- "brier_model": 0.16902,
- "brier_market_mid": 0.1559,
+ "brier_model": 0.16839,
+ "brier_market_mid": 0.15527,
  "brier_ok": false,
  "replay_trades_needed": 150,
  "replay": {
   "base": {
-   "n": 105,
-   "pnl": -526.07,
+   "n": 106,
+   "pnl": -551.06,
    "ok": false
   },
   "ban15": {
@@ -20,7 +20,7 @@
   }
  },
  "eligible_variants": [],
- "checks_per_day_since_log_only": 1347.5,
+ "checks_per_day_since_log_only": 1347.9,
  "est_days_to_2000_checks": 0.0,
  "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
 }

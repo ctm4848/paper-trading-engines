@@ -1,37 +1,37 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791790205,
- "utc": "2026-10-12T07:30:05Z",
- "n_checks": 3037,
- "n_checks_with_outcome": 2966,
- "brier_model": 0.16902,
- "brier_market_mid": 0.1559,
- "brier_diff_model_minus_market": 0.01313,
+ "ts": 1791791105,
+ "utc": "2026-10-12T07:45:05Z",
+ "n_checks": 3052,
+ "n_checks_with_outcome": 2979,
+ "brier_model": 0.16839,
+ "brier_market_mid": 0.15527,
+ "brier_diff_model_minus_market": 0.01312,
  "calibration": {
   "0.0-0.1": {
-   "n": 183,
+   "n": 192,
    "model": 0.038,
    "market": 0.029,
    "actual": 0.016
   },
   "0.1-0.2": {
-   "n": 141,
+   "n": 142,
    "model": 0.15,
    "market": 0.077,
-   "actual": 0.05
+   "actual": 0.049
   },
   "0.2-0.3": {
-   "n": 203,
+   "n": 204,
    "model": 0.249,
    "market": 0.144,
-   "actual": 0.148
+   "actual": 0.147
   },
   "0.3-0.4": {
-   "n": 291,
+   "n": 293,
    "model": 0.356,
    "market": 0.267,
-   "actual": 0.268
+   "actual": 0.266
   },
   "0.4-0.5": {
    "n": 641,
@@ -82,12 +82,12 @@
  "paused": false,
  "hypothetical": {
   "base": {
-   "n": 105,
+   "n": 106,
    "wins": 30,
-   "pnl": -526.07,
-   "c_per_contract": -5.29,
-   "roi": -0.2037,
-   "fees": 119.96,
+   "pnl": -551.06,
+   "c_per_contract": -5.24,
+   "roi": -0.2114,
+   "fees": 121.53,
    "open": 0
   },
   "ban15": {
@@ -102,17 +102,17 @@
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 2966,
+  "checks_with_outcome": 2979,
   "checks_needed": 2000,
   "checks_ok": true,
-  "brier_model": 0.16902,
-  "brier_market_mid": 0.1559,
+  "brier_model": 0.16839,
+  "brier_market_mid": 0.15527,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
    "base": {
-    "n": 105,
-    "pnl": -526.07,
+    "n": 106,
+    "pnl": -551.06,
     "ok": false
    },
    "ban15": {
@@ -122,7 +122,7 @@
    }
   },
   "eligible_variants": [],
-  "checks_per_day_since_log_only": 1347.5,
+  "checks_per_day_since_log_only": 1347.9,
   "est_days_to_2000_checks": 0.0,
   "note": "~24 checks/day if only the hourly :07 wake runs (~3 months to 2,000); more while agents keep the box awake."
  }
