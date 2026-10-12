@@ -2,11 +2,11 @@
  "engine": "polymarket-copy",
  "mode": "DELAYED_COPY",
  "copy_window_min": 120,
- "ts": 1791795605,
- "utc": "2026-10-12T09:00:05Z",
+ "ts": 1791796505,
+ "utc": "2026-10-12T09:15:05Z",
  "fills": 20,
  "skips_by_reason": {
-  "already_copied_this_trader_market": 315,
+  "already_copied_this_trader_market": 316,
   "price_above_97c": 3,
   "slippage_over_3c": 15,
   "under_30min_left": 1
@@ -27,11 +27,11 @@
  "roi_realized": null,
  "resolved_lots_needed": 40,
  "verdict_ready": false,
- "equity": 4966.81,
+ "equity": 4966.64,
  "cash": 3500.0,
  "deployed": 1500.0,
  "cash_benchmark": 5001.22,
- "vs_cash": -34.41,
+ "vs_cash": -34.58,
  "per_trader": {
   "mountaindewd": {
    "fills": 5,
@@ -56,7 +56,7 @@
   "perfectnostalgia": {
    "fills": 15,
    "skips_by_reason": {
-    "already_copied_this_trader_market": 304,
+    "already_copied_this_trader_market": 305,
     "price_above_97c": 3,
     "slippage_over_3c": 15,
     "under_30min_left": 1
