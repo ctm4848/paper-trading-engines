@@ -1,7 +1,7 @@
 {
- "ts": 1791800107142,
- "utc": "2026-10-12T10:15:07Z",
- "equity": 4967.67,
+ "ts": 1791801007357,
+ "utc": "2026-10-12T10:30:07Z",
+ "equity": 4965.32,
  "cash": 3500.0,
  "deployed": 1500.0,
  "open_lots": 20,
@@ -9,8 +9,8 @@
  "settled": 0,
  "avg_lag_min": 6.5,
  "avg_slippage_c": 1.29,
- "cash_benchmark": 5001.24,
- "vs_benchmark": -33.58,
+ "cash_benchmark": 5001.25,
+ "vs_benchmark": -35.93,
  "capture_rate": 0.526,
  "resolved_lots": 0
 }
