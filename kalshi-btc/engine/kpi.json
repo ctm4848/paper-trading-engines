@@ -1,16 +1,16 @@
 {
  "engine": "kalshi-btc-15m",
  "mode": "LOG_ONLY",
- "ts": 1791809105,
- "utc": "2026-10-12T12:45:05Z",
- "n_checks": 3333,
- "n_checks_with_outcome": 3256,
- "brier_model": 0.16711,
- "brier_market_mid": 0.15504,
- "brier_diff_model_minus_market": 0.01207,
+ "ts": 1791810005,
+ "utc": "2026-10-12T13:00:05Z",
+ "n_checks": 3347,
+ "n_checks_with_outcome": 3270,
+ "brier_model": 0.16806,
+ "brier_market_mid": 0.15624,
+ "brier_diff_model_minus_market": 0.01182,
  "calibration": {
   "0.0-0.1": {
-   "n": 265,
+   "n": 267,
    "model": 0.035,
    "market": 0.028,
    "actual": 0.011
@@ -22,10 +22,10 @@
    "actual": 0.078
   },
   "0.2-0.3": {
-   "n": 230,
+   "n": 233,
    "model": 0.248,
-   "market": 0.151,
-   "actual": 0.152
+   "market": 0.152,
+   "actual": 0.15
   },
   "0.3-0.4": {
    "n": 316,
@@ -46,22 +46,22 @@
    "actual": 0.555
   },
   "0.6-0.7": {
-   "n": 384,
+   "n": 386,
    "model": 0.644,
    "market": 0.754,
-   "actual": 0.758
+   "actual": 0.754
   },
   "0.7-0.8": {
-   "n": 250,
+   "n": 254,
    "model": 0.746,
-   "market": 0.848,
-   "actual": 0.884
+   "market": 0.847,
+   "actual": 0.87
   },
   "0.8-0.9": {
-   "n": 157,
+   "n": 160,
    "model": 0.845,
-   "market": 0.925,
-   "actual": 0.962
+   "market": 0.924,
+   "actual": 0.944
   },
   "0.9-1.0": {
    "n": 196,
@@ -91,22 +91,22 @@
    "open": 0
   },
   "ban15": {
-   "n": 115,
-   "wins": 36,
-   "pnl": -322.33,
-   "c_per_contract": -3.46,
-   "roi": -0.1136,
-   "fees": 126.87,
+   "n": 116,
+   "wins": 37,
+   "pnl": -229.26,
+   "c_per_contract": -2.43,
+   "roi": -0.0801,
+   "fees": 128.2,
    "open": 0
   }
  },
  "gate": {
   "passed": false,
-  "checks_with_outcome": 3256,
+  "checks_with_outcome": 3270,
   "checks_needed": 2000,
   "checks_ok": true,
-  "brier_model": 0.16711,
-  "brier_market_mid": 0.15504,
+  "brier_model": 0.16806,
+  "brier_market_mid": 0.15624,
   "brier_ok": false,
   "replay_trades_needed": 150,
   "replay": {
@@ -116,8 +116,8 @@
     "ok": false
    },
    "ban15": {
-    "n": 115,
-    "pnl": -322.33,
+    "n": 116,
+    "pnl": -229.26,
     "ok": false
    }
   },
