@@ -2,8 +2,8 @@
  "engine": "polymarket-copy",
  "mode": "DELAYED_COPY",
  "copy_window_min": 120,
- "ts": 1791776705,
- "utc": "2026-10-12T03:45:05Z",
+ "ts": 1791777605,
+ "utc": "2026-10-12T04:00:05Z",
  "fills": 18,
  "skips_by_reason": {
   "already_copied_this_trader_market": 291,
@@ -27,11 +27,11 @@
  "roi_realized": null,
  "resolved_lots_needed": 40,
  "verdict_ready": false,
- "equity": 4963.25,
+ "equity": 4963.04,
  "cash": 3650.0,
  "deployed": 1350.0,
  "cash_benchmark": 5001.1,
- "vs_cash": -37.85,
+ "vs_cash": -38.06,
  "per_trader": {
   "mountaindewd": {
    "fills": 3,
