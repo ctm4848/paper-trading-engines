@@ -6,17 +6,15 @@
  "peak_equity": 5000.0,
  "positions": {},
  "closed": {},
- "await": {
-  "KXBTC15M-26OCT120400-00": 1791792000.0
- },
+ "await": {},
  "trades_by_day": {},
  "paused": false,
  "pause_reason": null,
- "runs": 3197,
- "last_run": 1791791105.0766816,
+ "runs": 3212,
+ "last_run": 1791792005.0759983,
  "spot_fail_streak": 0,
  "api_fail_streak": 0,
- "n_checks": 3053,
+ "n_checks": 3067,
  "hypo": {
   "base": {
    "open": {},
@@ -1928,12 +1926,30 @@
      "payout": 0.0,
      "pnl": -24.99,
      "settled_ts": 1791791105.0766816
+    },
+    "KXBTC15M-26OCT120400-00": {
+     "ticker": "KXBTC15M-26OCT120400-00",
+     "side": "no",
+     "contracts": 58,
+     "vwap": 0.41,
+     "fee": 0.99,
+     "cost": 24.77,
+     "p_model": 0.46750795565615455,
+     "p_up": 0.5324920443438454,
+     "entry_ts": 1791791405.0762691,
+     "tau_s": 595,
+     "strike": 83884.37,
+     "close_ts": 1791792000.0,
+     "result": "yes",
+     "payout": 0.0,
+     "pnl": -24.77,
+     "settled_ts": 1791792005.0759983
     }
    },
    "by_day": {
     "2026-10-10": 40,
     "2026-10-11": 40,
-    "2026-10-12": 26
+    "2026-10-12": 27
    }
   },
   "ban15": {
@@ -3756,12 +3772,30 @@
      "payout": 0.0,
      "pnl": -24.89,
      "settled_ts": 1791789365.0783951
+    },
+    "KXBTC15M-26OCT120400-00": {
+     "ticker": "KXBTC15M-26OCT120400-00",
+     "side": "no",
+     "contracts": 58,
+     "vwap": 0.41,
+     "fee": 0.99,
+     "cost": 24.77,
+     "p_model": 0.46750795565615455,
+     "p_up": 0.5324920443438454,
+     "entry_ts": 1791791405.0762691,
+     "tau_s": 595,
+     "strike": 83884.37,
+     "close_ts": 1791792000.0,
+     "result": "yes",
+     "payout": 0.0,
+     "pnl": -24.77,
+     "settled_ts": 1791792005.0759983
     }
    },
    "by_day": {
     "2026-10-10": 40,
     "2026-10-11": 40,
-    "2026-10-12": 21
+    "2026-10-12": 22
    }
   }
  },
@@ -3781,7 +3815,7 @@
   "wins": 0,
   "realized_pnl": 0,
   "avg_pnl_c_per_contract": null,
-  "checks": 3053,
+  "checks": 3067,
   "paused": false,
   "pause_reason": null
  }
